@@ -1,0 +1,29 @@
+# OSX Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Rails related
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rvmrc
+/.bundle
+/vendor/bundle
+/vendor/ruby
+/log/*
+/tmp/*
+/db/*.sqlite3
+/public/system/*
+/coverage/
+/spec/tmp/*
+*.orig
+rerun.txt
+pickle-email-*.html
+.project
+.simplecov

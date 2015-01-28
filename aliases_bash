@@ -1,0 +1,77 @@
+# Open bash profile and vimrc in vim
+alias bashp="vim ~/.bash_profile"
+alias vimrc="vim ~/.vimrc"
+alias als="vim ~/.aliases.bash"
+
+
+# Git aliases
+alias gs="git status"
+alias gd="git diff --patience --ignore-space-change"
+alias gc="git checkout"
+alias gb="git branch"
+alias ga="git add"
+alias gh="git hist"
+alias fp="git push -f"
+alias gcm="git commit -m"
+alias gcb="git checkout -b"
+alias brah="git browse"
+alias pull="git pull"
+alias clone="git clone"
+alias pulreq="git pull-request"
+
+
+# Rebase aliases
+alias fetch="git fetch origin master"
+alias rebase="git rebase origin/master"
+alias rebasi="git rebase -i origin/master"
+alias fere="fetch && rebase"
+alias feri="fetch && rebasi"
+alias cont="git rebase --continue"
+alias skip="git rebase --skip"
+alias abort="git rebase --abort"
+
+
+# Rake aliases
+alias dbreset="rake db:reset"
+alias dbreste="rake db:reset"
+alias dbsetup="rake db:setup"
+alias dbdrop="rake db:drop"
+alias dbcreate="rake db:create"
+alias dbmig="rake db:migrate"
+alias dbseed="rake db:seed"
+alias routes="rake routes"
+
+
+# Directory aliases
+alias turing="cd ~/turing"
+alias temp="cd ~/TEMP"
+alias exer="cd ~/exercism"
+alias proj="cd ~/turing/projects"
+alias retro="cd ~/turing/retrospectives"
+alias octo="cd ~/turing/octopress"
+alias din="cd ~/turing/projects/dinner_dash"
+alias piv="cd ~/turing/projects/the_pivot"
+alias listr="cd ~/turing/projects/mv_listr"
+alias light="cd ~/turing/lightning"
+alias work="cd ~/turing/workshops"
+
+
+# Exercism aliases
+alias es="exercism submit"
+alias ef="exercism fetch"
+
+
+# Server alias
+alias rs="rails s"
+alias rc="rails c"
+alias uniw="open http://localhost:3000 && unicorn -p 3000"
+alias uni="unicorn -p 3000"
+
+
+# Spec aliases
+alias spec="rspec"
+alias push="spec && push"
+
+
+# Misc
+alias la="l -a"
