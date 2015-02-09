@@ -20,6 +20,8 @@ eval "$(hub alias -s)"
 # Load rvm so you can access Ruby
 source "$HOME/.rvm/scripts/rvm"
 
+# Load bin
+export PATH="bin:$PATH"
 
 # Take you to the dir of a file in a gem. e.g. `2gem rspec`
 2gem () {

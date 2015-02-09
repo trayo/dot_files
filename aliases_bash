@@ -18,6 +18,7 @@ alias brah="git browse"
 alias pull="git pull"
 alias clone="git clone"
 alias pulreq="git pull-request"
+alias master="git checkout master"
 
 
 # Rebase aliases
@@ -75,3 +76,4 @@ alias push="spec && push"
 
 # Misc
 alias la="l -a"
+alias shh="ssh"

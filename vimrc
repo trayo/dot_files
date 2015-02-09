@@ -21,7 +21,9 @@ nnoremap <Leader>v :r !pbpaste<CR>;                       " paste without being 
 vnoremap <Leader>c :w !pbcopy<CR>;                        " copy without being stupid, that works
 vnoremap <Leader>3 I# <ESC>                               " Comment for ruby
 vnoremap <Leader>/ I// <ESC>                              " Comment for javascript
-nnoremap <Leader>t :w<CR>:!rspec %<CR>
+nnoremap <Leader>t :w<CR>:!bin/rspec %<CR>
+
+nmap K <Esc>                                              " Get rid of shitty man pages
 
 
 " move lines up and down
