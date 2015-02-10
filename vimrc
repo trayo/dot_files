@@ -135,10 +135,14 @@ call Pl#Theme#RemoveSegment('filetype')
 " call Pl#Theme#RemoveSegment('lineinfo')           " Line number and column length
 
 
-"" ========== NERDTree  ==========
+"" ========== NERDTree ==========
 "" autocmd vimenter * NERDTree     " Make NERDTree open when vim opens
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " close vim if NERDTree is the only open buffer
+
+
+"" ========== ctrlp ==========
+set wildignore+=*tmp/*
 
 
 "" ========== Default Tree Type ==========
