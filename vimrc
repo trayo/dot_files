@@ -15,13 +15,14 @@ nmap <Leader>c oconsole.log();<c-o>h
 nmap <Leader>e :NERDTreeToggle<CR>;                       " NERD file tree
 nmap <Leader>g :noh<CR>;                                  " no highlight
 vnoremap . :norm.<CR>;                                    " in visual mode, "." will for each line, go into normal mode and execute the "."
-nnoremap <Leader>q :wq<CR>;                               " easy quit, yo
+nnoremap <Leader>q :q!<CR>;                               " easy quit, yo
 nnoremap <Leader>w :w!<CR>;                               " Fuck you x1million, vim (http://stackoverflow.com/questions/26070153/vim-wont-write-file-without-a-sometimes-e13)
 nnoremap <Leader>v :r !pbpaste<CR>;                       " paste without being stupid, that works
 vnoremap <Leader>c :w !pbcopy<CR>;                        " copy without being stupid, that works
 vnoremap <Leader>3 I# <ESC>                               " Comment for ruby
 vnoremap <Leader>/ I// <ESC>                              " Comment for javascript
 nnoremap <Leader>t :w<CR>:!bin/rspec %<CR>
+nnoremap <Up> :!say "haters gonna hate hate hate hate"<CR><CR>  "Reaffirm Vim greatness
 
 nmap K <Esc>                                              " Get rid of shitty man pages
 
@@ -41,11 +42,6 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
-
-" Emacs/Readline keybindings for commandline mode
-" http://tiswww.case.edu/php/chet/readline/readline.html#SEC4
-" many of these taken from vimacs http://www.vim.org/scripts/script.php?script_id=300
 
 
 " navigation
@@ -136,13 +132,13 @@ call Pl#Theme#RemoveSegment('filetype')
 
 
 "" ========== NERDTree ==========
-"" autocmd vimenter * NERDTree     " Make NERDTree open when vim opens
+" autocmd vimenter * NERDTree     " Make NERDTree open when vim opens
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " close vim if NERDTree is the only open buffer
 
 
 "" ========== ctrlp ==========
-set wildignore+=*tmp/*
+set wildignore+=*tmp/*,*coverage/*
 
 
 "" ========== Default Tree Type ==========
