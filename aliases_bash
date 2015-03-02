@@ -63,7 +63,7 @@ alias spush="spec && push"
 
 
 # Rails aliases
-alias railn="rails new -T --database=postgresql"
+alias railsn="rails new -T --database=postgresql --skip-turbolinks"
 alias dospring="bundle exec spring binstub --all"
 alias rs="rails s"
 alias rc="rails c"
