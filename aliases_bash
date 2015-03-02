@@ -15,6 +15,7 @@ alias fp="git push -f"
 alias gcm="git commit -m"
 alias gcb="git checkout -b"
 alias brah="git browse"
+alias brahp="git browse -- pulls"
 alias pull="git pull"
 alias clone="git clone"
 alias pulreq="git pull-request"
@@ -48,30 +49,36 @@ alias turing="cd ~/turing"
 alias temp="cd ~/TEMP"
 alias exer="cd ~/exercism"
 alias proj="cd ~/turing/projects"
-alias retro="cd ~/turing/retrospectives"
 alias octo="cd ~/turing/octopress"
-alias din="cd ~/turing/projects/dinner_dash"
 alias piv="cd ~/turing/projects/the_pivot"
-alias listr="cd ~/turing/projects/mv_listr"
-alias light="cd ~/turing/lightning"
+alias list="cd ~/turing/projects/mv_listr"
+alias come="cd ~/turing/projects/committen_ember"
+alias comr="cd ~/turing/projects/committen_rails"
 alias work="cd ~/turing/workshops"
 
 
-# Exercism aliases
-alias es="exercism submit"
-alias ef="exercism fetch"
+# Spec aliases
+alias spec="rspec"
+alias spush="spec && push"
 
 
-# Server alias
+# Rails aliases
+alias railn="rails new -T --database=postgresql"
+alias dospring="bundle exec spring binstub --all"
 alias rs="rails s"
 alias rc="rails c"
 alias uniw="open http://localhost:3000 && unicorn -p 3000"
 alias uni="unicorn -p 3000"
 
 
-# Spec aliases
-alias spec="rspec"
-alias push="spec && push"
+# Ember alias
+alias ems="ember server -p 3000"
+alias npmbow="npm i && bower i"
+
+
+# Exercism aliases
+alias es="exercism submit"
+alias ef="exercism fetch"
 
 
 # Misc

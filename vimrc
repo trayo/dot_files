@@ -9,22 +9,47 @@ set nowritebackup                                         " only in case you don
 set noswapfile                                            " no swap files
 set scrolloff=4                                           " adds top/bottom buffer between cursor and window
 set cursorline                                            " colours the line the cursor is on
-set relativenumber                                        " line numbers
-nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>;   " pry insertion
-nmap <Leader>c oconsole.log();<c-o>h
-nmap <Leader>e :NERDTreeToggle<CR>;                       " NERD file tree
-nmap <Leader>g :noh<CR>;                                  " no highlight
-vnoremap . :norm.<CR>;                                    " in visual mode, "." will for each line, go into normal mode and execute the "."
-nnoremap <Leader>q :q!<CR>;                               " easy quit, yo
-nnoremap <Leader>w :w!<CR>;                               " Fuck you x1million, vim (http://stackoverflow.com/questions/26070153/vim-wont-write-file-without-a-sometimes-e13)
-nnoremap <Leader>v :r !pbpaste<CR>;                       " paste without being stupid, that works
-vnoremap <Leader>c :w !pbcopy<CR>;                        " copy without being stupid, that works
-vnoremap <Leader>3 I# <ESC>                               " Comment for ruby
-vnoremap <Leader>/ I// <ESC>                              " Comment for javascript
-nnoremap <Leader>t :w<CR>:!bin/rspec %<CR>
-nnoremap <Up> :!say "haters gonna hate hate hate hate"<CR><CR>  "Reaffirm Vim greatness
+set number                                                " line numbers
+let g:mustache_abbreviations = 1
 
-nmap K <Esc>                                              " Get rid of shitty man pages
+" in visual mode, "." will for each line, go into normal mode and execute the "."
+vnoremap . :norm.<CR>
+
+nmap <Leader>3 gcc
+nmap <Leader>c oconsole.log();<c-o>h
+nmap <Leader>e :NERDTreeToggle<CR>
+" no highlight
+nmap <Leader>g :noh<CR>
+" pry insertion
+nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
+
+
+vmap <Leader>3 gc
+
+nnoremap <Leader>bb :!bundle install<CR>
+nnoremap <Leader>q :q!<CR>
+nnoremap <Leader>t :w<CR>:!rspec %<CR>
+nnoremap <Leader>w :w!<CR>
+
+
+" paste without being stupid, that works
+nnoremap <Leader>v :r !pbpaste<CR>
+" copy without being stupid, that works
+vnoremap <Leader>c :w !pbcopy<CR><CR>
+
+
+"" Trollin remaps
+nnoremap <Up> :!say -v "pipe organ" "haters gonna hate hate hate hate hate"<CR><CR>
+nnoremap <Left> :!say "updog"<CR><CR>
+nnoremap <Right> :!say "alex sucks"<CR><CR>
+nnoremap <Down> :!say "hater"<CR><CR>
+
+
+" Disable Ex mode
+map Q <Nop>
+
+" Disable K looking stuff up
+map K <Nop>
 
 
 " move lines up and down
@@ -61,6 +86,7 @@ cnoremap <M-n> <Down>
 cnoremap <C-k> <C-f>d$<C-c><End>
 cnoremap <C-y> <C-r><C-o>"
 cnoremap <C-d> <Right><C-h>
+
 
 " sets vim splits to default right and bottom
 set splitbelow
@@ -134,11 +160,12 @@ call Pl#Theme#RemoveSegment('filetype')
 "" ========== NERDTree ==========
 " autocmd vimenter * NERDTree     " Make NERDTree open when vim opens
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " close vim if NERDTree is the only open buffer
+" close vim if NERDTree is the only open buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 "" ========== ctrlp ==========
-set wildignore+=*tmp/*,*coverage/*
+set wildignore+=*tmp/*,*coverage/*,*bower_components/*,*node_modules/*
 
 
 "" ========== Default Tree Type ==========
