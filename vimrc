@@ -10,7 +10,22 @@ set noswapfile                                            " no swap files
 set scrolloff=4                                           " adds top/bottom buffer between cursor and window
 set cursorline                                            " colours the line the cursor is on
 set number                                                " line numbers
+
+"" ========== Mustache helper ===========
 let g:mustache_abbreviations = 1
+
+
+"" ======= Always Rainbow Parens ========
+nnoremap <Leader>9 :Rainbow<CR>
+command Rainbow :call ToggleRainbow()
+function ToggleRainbow()
+  RainbowParenthesesToggle
+  RainbowParenthesesLoadRound
+  RainbowParenthesesLoadSquare
+  RainbowParenthesesLoadBraces
+  RainbowParenthesesLoadChevrons
+endfunction
+
 
 " in visual mode, "." will for each line, go into normal mode and execute the "."
 vnoremap . :norm.<CR>
@@ -28,8 +43,13 @@ vmap <Leader>3 gc
 
 nnoremap <Leader>bb :!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
-nnoremap <Leader>t :w<CR>:!rspec %<CR>
+nnoremap <Leader>t :w<CR>:!bin/rspec %<CR>
 nnoremap <Leader>w :w!<CR>
+" make left pane fullscreen
+nnoremap <Leader>] <c-w>l<c-w><BAR>
+" make right pane fullscreen
+nnoremap <Leader>[ <c-w>h<c-w><BAR>
+nnoremap <Leader>= <c-w>=
 
 
 " paste without being stupid, that works
@@ -38,7 +58,7 @@ nnoremap <Leader>v :r !pbpaste<CR>
 vnoremap <Leader>c :w !pbcopy<CR><CR>
 
 
-"" Trollin remaps
+" Trollin remaps
 nnoremap <Up> :!say -v "pipe organ" "haters gonna hate hate hate hate hate"<CR><CR>
 nnoremap <Left> :!say "updog"<CR><CR>
 nnoremap <Right> :!say "alex sucks"<CR><CR>
@@ -47,7 +67,6 @@ nnoremap <Down> :!say "hater"<CR><CR>
 
 " Disable Ex mode
 map Q <Nop>
-
 " Disable K looking stuff up
 map K <Nop>
 
@@ -69,7 +88,7 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 
-" navigation
+" Command navigation
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-f> <Right>
@@ -80,7 +99,7 @@ cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 
 
-" editing
+" Command editing
 cnoremap <M-p> <Up>
 cnoremap <M-n> <Down>
 cnoremap <C-k> <C-f>d$<C-c><End>

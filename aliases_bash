@@ -17,7 +17,6 @@ alias gcb="git checkout -b"
 alias brah="git browse"
 alias brahp="git browse -- pulls"
 alias pull="git pull"
-alias clone="git clone"
 alias pulreq="git pull-request"
 alias master="git checkout master"
 
@@ -50,11 +49,17 @@ alias temp="cd ~/TEMP"
 alias exer="cd ~/exercism"
 alias proj="cd ~/turing/projects"
 alias octo="cd ~/turing/octopress"
+alias work="cd ~/turing/workshops"
+alias repos="cd ~/repositories"
+
+
+# Projects
+alias mast="cd ~/turing/projects/mastermind"
+alias sales="cd ~/turing/projects/sales_engine"
+alias din="cd ~/turing/projects/dinner_dash"
 alias piv="cd ~/turing/projects/the_pivot"
 alias list="cd ~/turing/projects/mv_listr"
-alias come="cd ~/turing/projects/committen_ember"
-alias comr="cd ~/turing/projects/committen_rails"
-alias work="cd ~/turing/workshops"
+alias scav="cd ~/turing/projects/scavenger_hunter"
 
 
 # Spec aliases
@@ -71,6 +76,14 @@ alias uniw="open http://localhost:3000 && unicorn -p 3000"
 alias uni="unicorn -p 3000"
 
 
+# Bin spring aliases
+alias br='bin/rails'
+alias brc='bin/rails c'
+alias brs='bin/rails s'
+alias brk='bin/rake'
+alias bspec='bin/rspec'
+
+
 # Ember alias
 alias ems="ember server -p 3000"
 alias npmbow="npm i && bower i"
@@ -82,5 +95,18 @@ alias ef="exercism fetch"
 
 
 # Misc
+alias be="bundle exec"
 alias la="l -a"
 alias shh="ssh"
+
+
+# Clone a repo and cd into it
+function clone(){
+  git clone $1 && cd $(basename ${1%.*})
+}
+
+# call "$ push" to automatically push the current branch
+function push {
+  git push -u origin $(parse_git_branch)
+}
+
