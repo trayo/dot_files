@@ -35,17 +35,6 @@ export PATH="bin:$PATH"
 }
 
 
-# fancy ls command
-# -l  long format
-# -F  / after dirs, * after exe, @ after symlink
-# -G  colorize
-# -g suppress owner
-# -o suppress group
-# -h humanize sizes
-# -q print nongraphic chars as question marks
-alias l="ls -lFGgohq"
-
-
 # give the fullpaths of files passed in argv or piped through stdin
 function fullpath {
   ruby -e '

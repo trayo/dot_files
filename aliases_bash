@@ -1,10 +1,11 @@
-# Open bash profile and vimrc in vim
+# open bash profile and vimrc in vim
 alias bashp="vim ~/.bash_profile"
 alias vimrc="vim ~/.vimrc"
 alias als="vim ~/.aliases.bash"
+alias vi="vim"
 
 
-# Git aliases
+# git aliases
 alias gs="git status"
 alias gd="git diff --patience --ignore-space-change"
 alias gc="git checkout"
@@ -21,7 +22,7 @@ alias pulreq="git pull-request"
 alias master="git checkout master"
 
 
-# Rebase aliases
+# rebase aliases
 alias fetch="git fetch origin master"
 alias rebase="git rebase origin/master"
 alias rebasi="git rebase -i origin/master"
@@ -32,7 +33,7 @@ alias skip="git rebase --skip"
 alias abort="git rebase --abort"
 
 
-# Rake aliases
+# rake aliases
 alias dbreset="rake db:reset"
 alias dbreste="rake db:reset"
 alias dbsetup="rake db:setup"
@@ -43,7 +44,7 @@ alias dbseed="rake db:seed"
 alias routes="rake routes"
 
 
-# Directory aliases
+# directory aliases
 alias turing="cd ~/turing"
 alias temp="cd ~/TEMP"
 alias exer="cd ~/exercism"
@@ -53,7 +54,7 @@ alias work="cd ~/turing/workshops"
 alias repos="cd ~/repositories"
 
 
-# Projects
+# projects
 alias mast="cd ~/turing/projects/mastermind"
 alias sales="cd ~/turing/projects/sales_engine"
 alias din="cd ~/turing/projects/dinner_dash"
@@ -62,12 +63,12 @@ alias list="cd ~/turing/projects/mv_listr"
 alias scav="cd ~/turing/projects/scavenger_hunter"
 
 
-# Spec aliases
+# spec aliases
 alias spec="rspec"
 alias spush="spec && push"
 
 
-# Rails aliases
+# rails aliases
 alias railsn="rails new -T --database=postgresql --skip-turbolinks"
 alias dospring="bundle exec spring binstub --all"
 alias rs="rails s"
@@ -76,31 +77,48 @@ alias uniw="open http://localhost:3000 && unicorn -p 3000"
 alias uni="unicorn -p 3000"
 
 
-# Bin spring aliases
+# bin spring aliases
 alias br='bin/rails'
 alias brc='bin/rails c'
 alias brs='bin/rails s'
 alias brk='bin/rake'
-alias bspec='bin/rspec'
+alias bs='bin/rspec'
 
 
-# Ember alias
+# ember alias
 alias ems="ember server -p 3000"
 alias npmbow="npm i && bower i"
 
 
-# Exercism aliases
+# exercism aliases
 alias es="exercism submit"
 alias ef="exercism fetch"
 
 
-# Misc
+# misc
+alias cov="open coverage/index.html"
+alias dcov="rm -rf coverage/"
 alias be="bundle exec"
 alias la="l -a"
+
+
+# stuff i misspell
 alias shh="ssh"
+alias eit="exit"
 
 
-# Clone a repo and cd into it
+# fancy ls command
+# -l  long format
+# -F  / after dirs, * after exe, @ after symlink
+# -G  colorize
+# -g suppress owner
+# -o suppress group
+# -h humanize sizes
+# -q print nongraphic chars as question marks
+alias l="ls -lFGgohq"
+
+
+# clone a repo and cd into it
 function clone(){
   git clone $1 && cd $(basename ${1%.*})
 }

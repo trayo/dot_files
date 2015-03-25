@@ -3,34 +3,26 @@ filetype plugin indent on
 syntax on
 
 
-"" ==========  My shit  ==========
+"" ==========  Basic setup stuff   ==========
 set nobackup                                              " no backup files
 set nowritebackup                                         " only in case you don't want a backup file while editing
 set noswapfile                                            " no swap files
 set scrolloff=4                                           " adds top/bottom buffer between cursor and window
 set cursorline                                            " colours the line the cursor is on
 set number                                                " line numbers
-
-"" ========== Mustache helper ===========
-let g:mustache_abbreviations = 1
+set clipboard=unnamed                                     " allows y and p to clipboard vim 7.4 only
 
 
-"" ======= Always Rainbow Parens ========
-nnoremap <Leader>9 :Rainbow<CR>
-command Rainbow :call ToggleRainbow()
-function ToggleRainbow()
-  RainbowParenthesesToggle
-  RainbowParenthesesLoadRound
-  RainbowParenthesesLoadSquare
-  RainbowParenthesesLoadBraces
-  RainbowParenthesesLoadChevrons
-endfunction
+"" ========= Shortcut commands =========
 
 
 " in visual mode, "." will for each line, go into normal mode and execute the "."
 vnoremap . :norm.<CR>
 
+" easy leader commenting
 nmap <Leader>3 gcc
+vmap <Leader>3 gc
+
 nmap <Leader>c oconsole.log();<c-o>h
 nmap <Leader>e :NERDTreeToggle<CR>
 " no highlight
@@ -39,19 +31,23 @@ nmap <Leader>g :noh<CR>
 nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
 
 
-vmap <Leader>3 gc
-
-nnoremap <Leader>bb :!bundle install<CR>
+nnoremap <Leader>gitx :!gitx<CR><CR>
+nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
-nnoremap <Leader>t :w<CR>:!bin/rspec %<CR>
+nnoremap <Leader>rou :!clear && rake routes<CR>
+nnoremap <Leader>t :w!<CR>:!bin/rspec %<CR>
 nnoremap <Leader>w :w!<CR>
+
+
+" easier pane focus
 " make left pane fullscreen
-nnoremap <Leader>] <c-w>l<c-w><BAR>
+nnoremap <Leader>] <c-w>l<c-w><BAR>0
 " make right pane fullscreen
-nnoremap <Leader>[ <c-w>h<c-w><BAR>
+nnoremap <Leader>[ <c-w>h<c-w><BAR>0
 nnoremap <Leader>= <c-w>=
 
 
+" === No longer needed with vim 7.4 ===
 " paste without being stupid, that works
 nnoremap <Leader>v :r !pbpaste<CR>
 " copy without being stupid, that works
@@ -107,7 +103,7 @@ cnoremap <C-y> <C-r><C-o>"
 cnoremap <C-d> <Right><C-h>
 
 
-" sets vim splits to default right and bottom
+"" sets vim splits to default right and bottom
 set splitbelow
 set splitright
 
@@ -134,6 +130,16 @@ cmap %% <C-R>=expand("%")<CR>
 
 "" filetypes
 au  BufRead,BufNewFile *.elm setfiletype haskell
+
+
+"" ======= Always Rainbow Parens ========
+augroup RainbowParens
+  autocmd!
+  autocmd VimEnter * RainbowParenthesesToggle
+  autocmd BufEnter * RainbowParenthesesLoadRound
+  autocmd BufEnter * RainbowParenthesesLoadSquare
+  autocmd BufEnter * RainbowParenthesesLoadBraces
+augroup END
 
 
 "" ==========  These come from Mislav (http://mislav.uniqpath.com/2011/12/vim-revisited/)  ==========
@@ -173,17 +179,17 @@ call Pl#Theme#RemoveSegment('syntastic:errors')
 call Pl#Theme#RemoveSegment('fileformat')
 call Pl#Theme#RemoveSegment('fileencoding')
 call Pl#Theme#RemoveSegment('filetype')
-" call Pl#Theme#RemoveSegment('lineinfo')           " Line number and column length
 
 
 "" ========== NERDTree ==========
-" autocmd vimenter * NERDTree     " Make NERDTree open when vim opens
+" Make NERDTree open when vim opens
+" autocmd vimenter * NERDTree
 
 " close vim if NERDTree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
-"" ========== ctrlp ==========
+"" ========== ignore certain folders with ctrlp ==========
 set wildignore+=*tmp/*,*coverage/*,*bower_components/*,*node_modules/*
 
 
@@ -193,6 +199,10 @@ let g:netrw_liststyle= 3
 
 "" ========== vim-textobj-rubyblock ==========
 runtime macros/matchit.vim " a dependency
+
+
+"" ========== Mustache helper ===========
+let g:mustache_abbreviations = 1
 
 
 " ========== Pathogen plugins ==========
