@@ -133,6 +133,7 @@ function push {
 # easy push dot files
 function updatedotfiles {
   cp ~/.vimrc ~/repositories/dot_files/vimrc
+  cp ~/.gitignore_global ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile ~/repositories/dot_files/bash_profile
   cp ~/.aliases.bash ~/repositories/dot_files/aliases_bash
   cd ~/repositories/dot_files
