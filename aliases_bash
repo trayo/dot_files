@@ -132,7 +132,12 @@ function push {
 
 # easy push dot files
 function updatedotfiles {
-  cp ~/.vimrc repositories/dot_files/vimrc
-  cp ~/.bash_profile repositories/dot_files/bash_profile
-  cp ~/.aliases.bash repositories/dot_files/aliases_bash
+  cp ~/.vimrc ~/repositories/dot_files/vimrc
+  cp ~/.bash_profile ~/repositories/dot_files/bash_profile
+  cp ~/.aliases.bash ~/repositories/dot_files/aliases_bash
+  cd ~/repositories/dot_files
+  ga .
+  gcm "updated dot files"
+  push
+  cd
 }
