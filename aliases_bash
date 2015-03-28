@@ -125,7 +125,7 @@ function clone(){
   git clone $1 && cd $(basename ${1%.*})
 }
 
-# call "$ push" to automatically push the current branch
+# call "push" in terminal to automatically push the current branch
 function push {
   git push -u origin $(parse_git_branch)
 }
