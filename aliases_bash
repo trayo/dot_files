@@ -5,6 +5,8 @@ alias als="vim ~/.aliases.bash"
 alias vi="vim"
 
 
+
+
 # git aliases
 alias gs="git status"
 alias gd="git diff --patience --ignore-space-change"
@@ -128,3 +130,9 @@ function push {
   git push -u origin $(parse_git_branch)
 }
 
+# easy push dot files
+function updatedotfiles {
+  cp ~/.vimrc repositories/dot_files/vimrc
+  cp ~/.bash_profile repositories/dot_files/bash_profile
+  cp ~/.aliases.bash repositories/dot_files/aliases_bash
+}

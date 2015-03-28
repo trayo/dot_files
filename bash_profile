@@ -1,39 +1,31 @@
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+source ~/.profile
 
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
 # support for postgres
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
-
 # git auto-completion
 source ~/.git-completion.bash
-
 
 # load my aliases
 source ~/.aliases.bash
 
-
 # enables 'git hub'
 eval "$(hub alias -s)"
 
-
 # Load rvm so you can access Ruby
-source "$HOME/.rvm/scripts/rvm"
-
 
 # Load nvm so you can access
 source ~/.nvm/nvm.sh
 
-
 # Load bin
 export PATH="bin:$PATH"
-
 
 # Take you to the dir of a file in a gem. e.g. `2gem rspec`
 2gem () {
   cd "$(dirname $(gem which $1))"
 }
-
 
 # give the fullpaths of files passed in argv or piped through stdin
 function fullpath {
@@ -42,7 +34,6 @@ function fullpath {
     ARGV.each { |path| puts File.expand_path path }         unless ARGV.empty?
   ' "$@"
 }
-
 
 # Prompt
 function parse_git_branch {
@@ -86,3 +77,4 @@ function build_mah_prompt {
 
 PROMPT_COMMAND='build_mah_prompt'
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

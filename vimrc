@@ -10,12 +10,13 @@ set noswapfile                                            " no swap files
 set scrolloff=4                                           " adds top/bottom buffer between cursor and window
 set cursorline                                            " colours the line the cursor is on
 set number                                                " line numbers
-set clipboard=unnamed                                     " allows y and p to clipboard vim 7.4 only
+set clipboard=unnamed                                     " allows y and p to clipboard vim > 7.4
+
+highlight ColorColumn ctermbg=grey
+call matchadd('ColorColumn', '\%81v', 100)
 
 
 "" ========= Shortcut commands =========
-
-
 " in visual mode, "." will for each line, go into normal mode and execute the "."
 vnoremap . :norm.<CR>
 
@@ -26,7 +27,7 @@ vmap <Leader>3 gc
 nmap <Leader>c oconsole.log();<c-o>h
 nmap <Leader>e :NERDTreeToggle<CR>
 " no highlight
-nmap <Leader>g :noh<CR>
+nmap <Leader>n :noh<CR>
 " pry insertion
 nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
 
@@ -36,7 +37,7 @@ nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>rou :!clear && rake routes<CR>
 nnoremap <Leader>t :w!<CR>:!bin/rspec %<CR>
-nnoremap <Leader>w :w!<CR>
+nnoremap <Leader>w :noh<CR>:w!<CR>
 
 
 " easier pane focus
