@@ -5,8 +5,6 @@ alias als="vim ~/.aliases.bash"
 alias vi="vim"
 
 
-
-
 # git aliases
 alias gs="git status"
 alias gd="git diff --patience --ignore-space-change"
@@ -104,7 +102,13 @@ alias be="bundle exec"
 alias la="l -a"
 
 
-# stuff i misspell
+# easy cd alias
+function ..(){
+  cd ../$1/$2/$3
+}
+
+
+# stuff I misspell
 alias shh="ssh"
 alias eit="exit"
 

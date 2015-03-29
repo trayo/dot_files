@@ -12,8 +12,8 @@ set cursorline                                            " colours the line the
 set number                                                " line numbers
 set clipboard=unnamed                                     " allows y and p to clipboard vim > 7.4
 
-highlight ColorColumn ctermbg=grey
-call matchadd('ColorColumn', '\%81v', 100)
+" highlight ColorColumn ctermbg=green
+" call matchadd('ColorColumn', '\%81v', 100)
 
 
 "" ========= Shortcut commands =========
