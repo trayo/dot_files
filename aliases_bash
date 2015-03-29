@@ -102,12 +102,6 @@ alias be="bundle exec"
 alias la="l -a"
 
 
-# easy cd alias
-function ..(){
-  cd ../$1/$2/$3
-}
-
-
 # stuff I misspell
 alias shh="ssh"
 alias eit="exit"
@@ -122,6 +116,18 @@ alias eit="exit"
 # -h humanize sizes
 # -q print nongraphic chars as question marks
 alias l="ls -lFGgohq"
+
+
+# cd and l the thing you cd'ed into
+function c(){
+  cd $1 && l
+}
+
+
+# easy cd ../../.. alias
+function ..(){
+  cd ../$1/$2/$3
+}
 
 
 # clone a repo and cd into it
