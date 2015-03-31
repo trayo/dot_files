@@ -145,28 +145,24 @@ function push {
 # easy update dot files
 function updatedotfiles {
 
-  # grab current working directory
   current_dir=${PWD}
 
-  # copy all files
   cp ~/.vimrc             ~/repositories/dot_files/vimrc
   cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
   cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
-
-  # change directory to repo, add and commit files and push them
   cd ~/repositories/dot_files
-  ga .
+  git add .
 
+  # if there are no arguments, use a default message
+  # otherwise you can supply a message with '$ updatedotfiles "your message here"'
   if [ $# -eq 0 ]
   then
-    gcm "updated dot files"
+    git commit -m "updated dot files"
   else
-    gcm "$1"
+    git commit -m "$1"
   fi
 
   git push
-
-  # change directory back to current working directory
   cd ${current_dir}
 }
