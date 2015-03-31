@@ -142,9 +142,6 @@ function push {
 }
 
 
-# a test to see if the last commit works
-
-
 # easy update dot files
 function updatedotfiles {
 
