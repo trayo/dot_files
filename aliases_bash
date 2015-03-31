@@ -125,13 +125,13 @@ function c(){
 
 
 # easy cd ../../.. alias
-function ..(){
+function .. {
   cd ../$1/$2/$3
 }
 
 
 # clone a repo and cd into it
-function clone(){
+function clone {
   git clone $1 && cd $(basename ${1%.*})
 }
 
@@ -149,15 +149,15 @@ function updatedotfiles {
   current_dir=${PWD}
 
   # copy all files
-  cp ~/.vimrc            ~/repositories/dot_files/vimrc
-  cp ~/.gitignore_global ~/repositories/dot_files/gitignore_global
-  cp ~/.bash_profile     ~/repositories/dot_files/bash_profile
-  cp ~/.aliases.bash     ~/repositories/dot_files/aliases_bash
+  cp ~/.vimrc             ~/repositories/dot_files/vimrc
+  cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
+  cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
+  cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
 
   # change directory to repo, add and commit files and push them
   cd ~/repositories/dot_files
   ga .
-  gcm "updated dot files"
+  gcm "$1" || "updated dot files"
   git push
 
   # change directory back to current working directory
