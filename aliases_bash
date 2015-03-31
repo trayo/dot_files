@@ -123,31 +123,43 @@ function c(){
   cd $1 && l
 }
 
+
 # easy cd ../../.. alias
 function ..(){
   cd ../$1/$2/$3
 }
+
 
 # clone a repo and cd into it
 function clone(){
   git clone $1 && cd $(basename ${1%.*})
 }
 
+
 # call "push" in terminal to automatically push the current branch
 function push {
   git push -u origin $(parse_git_branch)
 }
 
-# easy push dot files
+
+# easy update dot files
 function updatedotfiles {
-  last_dir=${PWD}
-  cp ~/.vimrc ~/repositories/dot_files/vimrc
+
+  # grab current working directory
+  current_dir=${PWD}
+
+  # copy all files
+  cp ~/.vimrc            ~/repositories/dot_files/vimrc
   cp ~/.gitignore_global ~/repositories/dot_files/gitignore_global
-  cp ~/.bash_profile ~/repositories/dot_files/bash_profile
-  cp ~/.aliases.bash ~/repositories/dot_files/aliases_bash
+  cp ~/.bash_profile     ~/repositories/dot_files/bash_profile
+  cp ~/.aliases.bash     ~/repositories/dot_files/aliases_bash
+
+  # change directory to repo, add and commit files and push them
   cd ~/repositories/dot_files
   ga .
   gcm "updated dot files"
   git push
-  cd ${last_dir}
+
+  # change directory back to current working directory
+  cd ${current_dir}
 }
