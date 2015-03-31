@@ -123,12 +123,10 @@ function c(){
   cd $1 && l
 }
 
-
 # easy cd ../../.. alias
 function ..(){
   cd ../$1/$2/$3
 }
-
 
 # clone a repo and cd into it
 function clone(){
@@ -142,6 +140,7 @@ function push {
 
 # easy push dot files
 function updatedotfiles {
+  last_dir=${PWD}
   cp ~/.vimrc ~/repositories/dot_files/vimrc
   cp ~/.gitignore_global ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile ~/repositories/dot_files/bash_profile
@@ -149,6 +148,6 @@ function updatedotfiles {
   cd ~/repositories/dot_files
   ga .
   gcm "updated dot files"
-  push
-  cd
+  git push
+  cd ${last_dir}
 }
