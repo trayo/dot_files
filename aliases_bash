@@ -142,6 +142,9 @@ function push {
 }
 
 
+# a test to see if the last commit works
+
+
 # easy update dot files
 function updatedotfiles {
 
@@ -157,7 +160,14 @@ function updatedotfiles {
   # change directory to repo, add and commit files and push them
   cd ~/repositories/dot_files
   ga .
-  gcm "$1" || "updated dot files"
+
+  if [ $# -eq 0 ]
+  then
+    gcm "updated dot files"
+  else
+    gcm "$1"
+  fi
+
   git push
 
   # change directory back to current working directory
