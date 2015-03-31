@@ -27,7 +27,7 @@ vmap <Leader>3 gc
 nmap <Leader>c oconsole.log();<c-o>h
 nmap <Leader>e :NERDTreeToggle<CR>
 " no highlight
-nmap <Leader>n :noh<CR>
+nmap <Leader>g :noh<CR>
 " pry insertion
 nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
 
@@ -53,13 +53,6 @@ nnoremap <Leader>= <c-w>=
 nnoremap <Leader>v :r !pbpaste<CR>
 " copy without being stupid, that works
 vnoremap <Leader>c :w !pbcopy<CR><CR>
-
-
-" Trollin remaps
-nnoremap <Up> :!say -v "pipe organ" "haters gonna hate hate hate hate hate"<CR><CR>
-nnoremap <Left> :!say "updog"<CR><CR>
-nnoremap <Right> :!say "alex sucks"<CR><CR>
-nnoremap <Down> :!say "hater"<CR><CR>
 
 
 " Disable Ex mode
