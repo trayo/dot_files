@@ -12,8 +12,8 @@ set cursorline                                            " colours the line the
 set number                                                " line numbers
 set clipboard=unnamed                                     " allows y and p to clipboard vim > 7.4
 
-" highlight ColorColumn ctermbg=green
-" call matchadd('ColorColumn', '\%81v', 100)
+highlight OverLength ctermbg=240 ctermfg=white
+call matchadd('OverLength', '\%81v', 100)
 
 
 "" ========= Shortcut commands =========
@@ -35,7 +35,6 @@ nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
 nnoremap <Leader>gitx :!gitx<CR><CR>
 nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
-nnoremap <Leader>rou :!clear && rake routes<CR>
 nnoremap <Leader>t :w!<CR>:!bin/rspec %<CR>
 nnoremap <Leader>w :noh<CR>:w!<CR>
 
@@ -48,11 +47,16 @@ nnoremap <Leader>[ <c-w>h<c-w><BAR>0
 nnoremap <Leader>= <c-w>=
 
 
+" custom commands
+command Routes :!clear && bin/rake routes
+command GITX !gitx
+
+
 " === No longer needed with vim 7.4 ===
 " paste without being stupid, that works
-nnoremap <Leader>v :r !pbpaste<CR>
+" nnoremap <Leader>v :r !pbpaste<CR>
 " copy without being stupid, that works
-vnoremap <Leader>c :w !pbcopy<CR><CR>
+" vnoremap <Leader>c :w !pbcopy<CR><CR>
 
 
 " Disable Ex mode
@@ -126,7 +130,7 @@ cmap %% <C-R>=expand("%")<CR>
 au  BufRead,BufNewFile *.elm setfiletype haskell
 
 
-"" ======= Always Rainbow Parens ========
+"" ======= always rainbow parens ========
 augroup RainbowParens
   autocmd!
   autocmd VimEnter * RainbowParenthesesToggle
