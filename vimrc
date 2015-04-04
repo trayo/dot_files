@@ -32,7 +32,6 @@ nmap <Leader>g :noh<CR>
 nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
 
 
-nnoremap <Leader>gitx :!gitx<CR><CR>
 nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>s :w!<CR>:!bin/rspec %<CR>
