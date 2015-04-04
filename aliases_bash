@@ -61,6 +61,7 @@ alias din="cd ~/turing/projects/dinner_dash"
 alias piv="cd ~/turing/projects/the_pivot"
 alias list="cd ~/turing/projects/mv_listr"
 alias scav="cd ~/turing/projects/scavenger_hunter"
+alias enig="cd ~/turing/projects/enigma"
 
 
 # spec aliases

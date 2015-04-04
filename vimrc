@@ -11,7 +11,7 @@ set scrolloff=4                                           " adds top/bottom buff
 set cursorline                                            " colours the line the cursor is on
 set number                                                " line numbers
 set clipboard=unnamed                                     " allows y and p to clipboard vim > 7.4
-
+set complete-=i                                           " ignores included files in autocomplete
 highlight OverLength ctermbg=240 ctermfg=white
 call matchadd('OverLength', '\%81v', 100)
 
@@ -35,7 +35,8 @@ nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
 nnoremap <Leader>gitx :!gitx<CR><CR>
 nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
-nnoremap <Leader>t :w!<CR>:!bin/rspec %<CR>
+nnoremap <Leader>s :w!<CR>:!bin/rspec %<CR>
+nnoremap <Leader>t :w!<CR>:!ruby %<CR>
 nnoremap <Leader>w :noh<CR>:w!<CR>
 
 
@@ -188,7 +189,19 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 
 "" ========== ignore certain folders with ctrlp ==========
-set wildignore+=*tmp/*,*coverage/*,*bower_components/*,*node_modules/*
+set wildignore+=*tmp/*,*coverage/*,*bower_components/*,*node_modules/*,*.rvm*
+
+" the silver searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 
 "" ========== Default Tree Type ==========
