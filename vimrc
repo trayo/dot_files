@@ -12,6 +12,16 @@ set cursorline                                            " colours the line the
 set number                                                " line numbers
 set clipboard=unnamed                                     " allows y and p to clipboard vim > 7.4
 set complete-=i                                           " ignores included files in autocomplete
+set splitbelow                                            " sets vim splits to default right and bottom
+set splitright
+set hlsearch                                              " highlight matches
+set incsearch                                             " incremental searching
+set nowrap                                                " don't wrap lines
+set tabstop=2 shiftwidth=2                                " a tab is two spaces (or set this to 4)
+set expandtab                                             " use spaces, not tabs (optional)
+set backspace=indent,eol,start                            " backspace through everything in insert mode
+
+
 highlight OverLength ctermbg=240 ctermfg=white
 call matchadd('OverLength', '\%81v', 100)
 
@@ -35,7 +45,7 @@ nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
 nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>s :w!<CR>:!bin/rspec %<CR>
-nnoremap <Leader>t :w!<CR>:!ruby %<CR>
+" nnoremap <Leader>t :w!<CR>:!ruby %<CR>
 nnoremap <Leader>w :noh<CR>:w!<CR>
 
 
@@ -50,6 +60,15 @@ nnoremap <Leader>= <c-w>=
 " custom commands
 command Routes :!clear && bin/rake routes
 command GITX !gitx
+
+
+"" ======= run tests =======
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+let test#ruby#minitest#executable = 'ruby'
 
 
 " === No longer needed with vim 7.4 ===
@@ -101,11 +120,6 @@ cnoremap <C-y> <C-r><C-o>"
 cnoremap <C-d> <Right><C-h>
 
 
-"" sets vim splits to default right and bottom
-set splitbelow
-set splitright
-
-
 "" strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
@@ -146,18 +160,6 @@ syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
-
-
-"" Whitespace
-set nowrap                      " don't wrap lines
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
-set expandtab                   " use spaces, not tabs (optional)
-set backspace=indent,eol,start  " backspace through everything in insert mode
-
-
-"" Searching
-set hlsearch                    " highlight matches
-set incsearch                   " incremental searching
 
 
 "" ==========  Pathogen, vim path manager (https://github.com/tpope/vim-pathogen#readme)  ==========
@@ -223,15 +225,11 @@ let g:mustache_abbreviations = 1
 " unite.vim                   https://github.com/Shougo/unite.vim.git
 " vim-coffee-script           https://github.com/kchmck/vim-coffee-script.git
 " vim-commentary              https://github.com/tpope/vim-commentary.git
-" vim-cucumber                https://github.com/tpope/vim-cucumber.git
-" vim-elixir                  https://github.com/elixir-lang/vim-elixir.git
 " vim-endwise                 https://github.com/tpope/vim-endwise.git
 " vim-fish                    https://github.com/dag/vim-fish.git
 " vim-fugitive                https://github.com/tpope/vim-fugitive.git
-" vim-haml                    https://github.com/tpope/vim-haml.git
 " hdevtools                   https://github.com/bitc/hdevtools.git
 " vim-javascript              https://github.com/pangloss/vim-javascript.git
-" vim-markdown                https://github.com/tpope/vim-markdown.git
 " vim-powerline               https://github.com/Lokaltog/vim-powerline.git
 " vim-repeat                  https://github.com/tpope/vim-repeat.git
 " vim-rspec                   https://github.com/skwp/vim-rspec.git
