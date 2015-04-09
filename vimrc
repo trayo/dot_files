@@ -180,9 +180,12 @@ call Pl#Theme#RemoveSegment('fileencoding')
 call Pl#Theme#RemoveSegment('filetype')
 
 
-"" ========== NERDTree ==========
+"" ========== nerdtree ==========
 " Make NERDTree open when vim opens
 " autocmd vimenter * NERDTree
+
+" ignore files or folders in nerdtree
+let NERDTreeIgnore=['\coverage']
 
 " close vim if NERDTree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

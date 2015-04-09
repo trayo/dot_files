@@ -14,9 +14,7 @@ source ~/.aliases.bash
 # enables 'git hub'
 eval "$(hub alias -s)"
 
-# Load rvm so you can access Ruby
-
-# Load nvm so you can access
+# Load nvm so you can access 'node'
 source ~/.nvm/nvm.sh
 
 # Load bin
