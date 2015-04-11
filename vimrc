@@ -30,10 +30,6 @@ call matchadd('OverLength', '\%81v', 100)
 " in visual mode, "." will for each line, go into normal mode and execute the "."
 vnoremap . :norm.<CR>
 
-" easy leader commenting
-nmap <Leader>3 gcc
-vmap <Leader>3 gc
-
 nmap <Leader>c oconsole.log();<c-o>h
 nmap <Leader>e :NERDTreeToggle<CR>
 " no highlight
@@ -56,6 +52,8 @@ nnoremap <Leader>] <c-w>l<c-w><BAR>0
 nnoremap <Leader>[ <c-w>h<c-w><BAR>0
 nnoremap <Leader>= <c-w>=
 
+" replace spaces with underscore, for minitest test names
+vnoremap <Leader>u :s/\%V /_/g<cr>
 
 " custom commands
 command Routes :!clear && bin/rake routes
