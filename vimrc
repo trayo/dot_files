@@ -55,6 +55,15 @@ nnoremap <Leader>= <c-w>=
 " replace spaces with underscore, for minitest test names
 vnoremap <Leader>u :s/\%V /_/g<cr>
 
+" command for same as above
+command Underscore :call Underscore()
+function! Underscore()
+  normal! mqv_w
+  :s/\%V /_/g
+  :exe "normal! \<esc>`q"
+endfunction
+
+
 " custom commands
 command Routes :!clear && bin/rake routes
 command GITX !gitx

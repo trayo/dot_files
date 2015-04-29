@@ -51,7 +51,7 @@ alias exer="cd ~/exercism"
 alias proj="cd ~/turing/projects"
 alias octo="cd ~/turing/octopress"
 alias work="cd ~/turing/workshops"
-alias repos="cd ~/repositories"
+alias repo="cd ~/repositories"
 
 
 # projects
@@ -62,6 +62,7 @@ alias piv="cd ~/turing/projects/the_pivot"
 alias list="cd ~/turing/projects/mv_listr"
 alias scav="cd ~/turing/projects/scavenger_hunter"
 alias enig="cd ~/turing/projects/enigma"
+alias hack="cd ~/repositories/hacker_rank"
 
 
 # spec aliases
