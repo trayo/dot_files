@@ -63,6 +63,7 @@ alias list="cd ~/turing/projects/mv_listr"
 alias scav="cd ~/turing/projects/scavenger_hunter"
 alias enig="cd ~/turing/projects/enigma"
 alias hack="cd ~/repositories/hacker_rank"
+alias gamin="cd ~/turing/projects/where_is_denver_board_game_night"
 
 
 # spec aliases
