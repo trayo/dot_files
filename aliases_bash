@@ -103,11 +103,16 @@ alias cov="open coverage/index.html"
 alias dcov="rm -rf coverage/"
 
 
+# heroku
+alias hr="heroku run"
+alias hp="git push heroku master"
+
+
 # misc
-alias reb="source ~/.bash_profile"
-alias shotgun="clear && shotgun -p 3000"
 alias be="bundle exec"
 alias la="l -a"
+alias reb="source ~/.bash_profile"
+alias shotgun="clear && shotgun -p 3000"
 
 
 # stuff I misspell
