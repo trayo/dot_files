@@ -36,6 +36,7 @@ nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>g :noh<CR>
 " pry insertion
 nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
+nmap <Leader>r :redraw!<CR>
 
 
 nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
@@ -55,7 +56,7 @@ nnoremap <Leader>= <c-w>=
 " replace spaces with underscore, for minitest test names
 vnoremap <Leader>u :s/\%V /_/g<cr>
 
-" command for same as above
+" replace spaces with underscore, for minitest test names
 command Underscore :call Underscore()
 function! Underscore()
   normal! mqv_w
@@ -65,7 +66,7 @@ endfunction
 
 
 " custom commands
-command Routes :!clear && bin/rake routes
+command Routes !clear && bin/rake routes
 command GITX !gitx
 
 

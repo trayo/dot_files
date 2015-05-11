@@ -160,6 +160,7 @@ function updatedotfiles {
 
   current_dir=${PWD}
 
+  cp ~/.pryrc             ~/repositories/dot_files/pryrc
   cp ~/.vimrc             ~/repositories/dot_files/vimrc
   cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
