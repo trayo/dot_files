@@ -111,6 +111,7 @@ alias hp="git push heroku master"
 # misc
 alias be="bundle exec"
 alias la="l -a"
+alias me="open http://github.com/trayo"
 alias reb="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
 

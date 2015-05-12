@@ -23,7 +23,7 @@ set backspace=indent,eol,start                            " backspace through ev
 
 
 highlight OverLength ctermbg=240 ctermfg=white
-call matchadd('OverLength', '\%81v', 100)
+call matchadd('OverLength', '\%81v.', 100)
 
 
 "" ========= Shortcut commands =========
