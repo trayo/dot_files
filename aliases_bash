@@ -41,6 +41,7 @@ alias dbdrop="rake db:drop"
 alias dbcreate="rake db:create"
 alias dbmig="rake db:migrate"
 alias dbseed="rake db:seed"
+alias dbroll="rake db:rollback"
 alias routes="rake routes"
 
 
