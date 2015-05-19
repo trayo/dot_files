@@ -53,10 +53,14 @@ nnoremap <Leader>] <c-w>l<c-w><BAR>0
 nnoremap <Leader>[ <c-w>h<c-w><BAR>0
 nnoremap <Leader>= <c-w>=
 
+
+" ======== functions ========
+
 " replace spaces with underscore, for minitest test names
 vnoremap <Leader>u :s/\%V /_/g<cr>
 
 " replace spaces with underscore, for minitest test names
+command U :call Underscore()
 command Underscore :call Underscore()
 function! Underscore()
   normal! mqv_w
