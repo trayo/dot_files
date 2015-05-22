@@ -46,25 +46,25 @@ alias routes="rake routes"
 
 
 # directory aliases
-alias turing="c ~/turing"
-alias temp="c ~/TEMP"
-alias exer="c ~/exercism"
-alias proj="c ~/turing/projects"
-alias octo="c ~/turing/octopress"
-alias work="c ~/turing/workshops"
-alias repo="c ~/repositories"
+alias turing="cd ~/turing"
+alias temp="cd ~/TEMP"
+alias exer="cd ~/exercism"
+alias proj="cd ~/turing/projects"
+alias octo="cd ~/turing/octopress"
+alias work="cd ~/turing/workshops"
+alias repo="cd ~/repositories"
 
 
 # projects
-alias mast="c ~/turing/projects/mastermind"
-alias sales="c ~/turing/projects/sales_engine"
-alias din="c ~/turing/projects/dinner_dash"
-alias piv="c ~/turing/projects/the_pivot"
-alias list="c ~/turing/projects/mv_listr"
-alias scav="c ~/turing/projects/scavenger_hunter"
-alias enig="c ~/turing/projects/enigma"
-alias hack="c ~/repositories/hacker_rank"
-alias gamin="c ~/turing/projects/where_is_denver_board_game_night"
+alias mast="cd ~/turing/projects/mastermind"
+alias sales="cd ~/turing/projects/sales_engine"
+alias din="cd ~/turing/projects/dinner_dash"
+alias piv="cd ~/turing/projects/the_pivot"
+alias list="cd ~/turing/projects/mv_listr"
+alias scav="cd ~/turing/projects/scavenger_hunter"
+alias enig="cd ~/turing/projects/enigma"
+alias hack="cd ~/repositories/hacker_rank"
+alias gamin="cd ~/turing/projects/where_is_denver_board_game_night"
 
 
 # spec aliases
