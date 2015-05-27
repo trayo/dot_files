@@ -1,3 +1,5 @@
+########## aliases ##########
+
 # open bash profile and vimrc in vim
 alias bashp="vim ~/.bash_profile"
 alias vimrc="vim ~/.vimrc"
@@ -133,38 +135,26 @@ alias eit="exit"
 alias l="ls -lFGgohq"
 
 
+########## functions ##########
+
 # overrides default cd to send alias l afterwards
 function cd {
   command cd $1 && l
 }
-
 
 # easy cd ../../.. alias
 function .. {
   cd ../$1/$2/$3
 }
 
-
 # clone a repo and cd into it
 function clone {
   git clone $1 && cd $(basename ${1%.*})
 }
 
-
 # call "push" in terminal to automatically push the current branch
 function push {
   git push -u origin $(parse_git_branch)
-}
-
-
-# # overrides rerun to use -c and -b by default
-function rerun {
-  if [ -z "$2" ]
-  then
-    command rerun $1 -cb
-  else
-    command rerun $1 -cbp $2
-  fi
 }
 
 # easy update dot files
@@ -191,4 +181,32 @@ function updatedotfiles {
 
   git push
   cd ${current_dir}
+}
+
+
+########## rerun functions ##########
+
+# overrides rerun to use -c and -b by default
+function rerun {
+if [ -z "$2" ]
+then
+  command rerun $1 -cb
+else
+  command rerun $1 -cbp $2
+fi
+}
+
+# rerun shortcut for running lua tests
+function relua {
+command rerun busted $1 -cbp "**/*.lua"
+}
+
+# rerun shortcut for running go tests
+function rego {
+command rerun go test -cbp "**/*.go"
+}
+
+# rerun shortcut for running javascript tests
+function rejs {
+command rerun jasmine-node $1 -cbp "**/*.js"
 }

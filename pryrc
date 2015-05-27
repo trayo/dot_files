@@ -1,5 +1,5 @@
-Pry::Commands.block_command /(jk)(jk)*/, "Alias for exit" do
-   captures[1] ? _pry_.run_command('exit') : exit
+Pry::Commands.block_command 'jk', "Alias for 'exit!'" do
+  exit
 end
 
 Pry::Commands.block_command 'pl', "Alias for 'play -l'" do |lines|
