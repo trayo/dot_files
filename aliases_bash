@@ -140,12 +140,11 @@ alias l="ls -lFGgohq"
 
 # overrides default cd to send alias l afterwards
 function cd {
-  command cd $1 && l
-}
-
-#
-function c {
-  command cd $1
+  if $2
+    command cd $1
+  else
+    command cd $1 && l
+  fi
 }
 
 # easy cd ../../.. alias
@@ -173,7 +172,7 @@ function updatedotfiles {
   cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
   cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
-  c ~/repositories/dot_files
+  cd ~/repositories/dot_files no_list
   git add .
 
   # if there are no arguments, use a default message
@@ -186,7 +185,7 @@ function updatedotfiles {
   fi
 
   git push
-  c ${current_dir}
+  cd ${current_dir} no_list
 }
 
 
