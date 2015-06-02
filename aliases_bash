@@ -113,6 +113,7 @@ alias hp="git push heroku master"
 
 # misc
 alias be="bundle exec"
+alias gf="vi Gemfile"
 alias ig="vi .gitignore"
 alias la="l -a"
 alias me="open http://github.com/trayo"
