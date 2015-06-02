@@ -168,7 +168,7 @@ function updatedotfiles {
   cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
   cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
-  cd ~/repositories/dot_files
+  command cd ~/repositories/dot_files
   git add .
 
   # if there are no arguments, use a default message
@@ -181,7 +181,7 @@ function updatedotfiles {
   fi
 
   git push
-  cd ${current_dir}
+  command cd ${current_dir}
 }
 
 
