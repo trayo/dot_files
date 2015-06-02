@@ -186,7 +186,7 @@ function updatedotfiles {
   fi
 
   git push
-  cd ${current_dir} no_list
+  cd ${current_dir} no_l
 }
 
 
