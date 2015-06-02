@@ -143,6 +143,11 @@ function cd {
   command cd $1 && l
 }
 
+#
+function c {
+  command cd $1
+}
+
 # easy cd ../../.. alias
 function .. {
   cd ../$1/$2/$3
@@ -168,7 +173,7 @@ function updatedotfiles {
   cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
   cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
-  command cd ~/repositories/dot_files
+  c ~/repositories/dot_files
   git add .
 
   # if there are no arguments, use a default message
@@ -181,7 +186,7 @@ function updatedotfiles {
   fi
 
   git push
-  command cd ${current_dir}
+  c ${current_dir}
 }
 
 
