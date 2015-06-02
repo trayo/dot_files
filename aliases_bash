@@ -140,7 +140,8 @@ alias l="ls -lFGgohq"
 
 # overrides default cd to send alias l afterwards
 function cd {
-  if $2
+  if [ $# -eq 2 ]
+  then
     command cd $1
   else
     command cd $1 && l
