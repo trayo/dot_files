@@ -113,6 +113,7 @@ alias hp="git push heroku master"
 
 # misc
 alias be="bundle exec"
+alias ig="vi .gitignore"
 alias la="l -a"
 alias me="open http://github.com/trayo"
 alias reb="source ~/.bash_profile"
@@ -187,13 +188,8 @@ function updatedotfiles {
 ########## rerun functions ##########
 
 # overrides rerun to use -c and -b by default
-function rerun {
-if [ -z "$2" ]
-then
-  command rerun $1 -cb
-else
-  command rerun $1 -cbp $2
-fi
+function reruby {
+command rerun $1 -cb
 }
 
 # rerun shortcut for running lua tests
