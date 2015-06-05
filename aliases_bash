@@ -141,12 +141,7 @@ alias l="ls -lFGgohq"
 
 # overrides default cd to send alias l afterwards
 function cd {
-  if [ $# -eq 2 ]
-  then
-    command cd $1
-  else
-    command cd $1 && l
-  fi
+  command cd $1 && l
 }
 
 # easy cd ../../.. alias
@@ -167,14 +162,12 @@ function push {
 # easy update dot files
 function updatedotfiles {
 
-  current_dir=${PWD}
-
   cp ~/.pryrc             ~/repositories/dot_files/pryrc
   cp ~/.vimrc             ~/repositories/dot_files/vimrc
   cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
   cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
-  cd ~/repositories/dot_files no_list
+  pushd ~/repositories/dot_files
   git add .
 
   # if there are no arguments, use a default message
@@ -187,7 +180,7 @@ function updatedotfiles {
   fi
 
   git push
-  cd ${current_dir} no_l
+  popd
 }
 
 
