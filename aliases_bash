@@ -7,7 +7,7 @@ alias als="vim ~/.aliases.bash"
 alias vi="vim"
 
 
-# git aliases
+# git
 alias gs="git status"
 alias gd="git diff --patience --ignore-space-change"
 alias gc="git checkout"
@@ -24,30 +24,19 @@ alias pulreq="git pull-request"
 alias master="git checkout master"
 
 
-# rebase aliases
+# rebase
 alias fetch="git fetch origin master"
 alias rebase="git rebase origin/master"
 alias rebasi="git rebase -i origin/master"
 alias fere="fetch && rebase"
 alias feri="fetch && rebasi"
+alias amend="git commit --amend"
 alias cont="git rebase --continue"
 alias skip="git rebase --skip"
 alias abort="git rebase --abort"
 
 
-# rake aliases
-alias dbreset="rake db:reset"
-alias dbreste="rake db:reset"
-alias dbsetup="rake db:setup"
-alias dbdrop="rake db:drop"
-alias dbcreate="rake db:create"
-alias dbmig="rake db:migrate"
-alias dbseed="rake db:seed"
-alias dbroll="rake db:rollback"
-alias routes="rake routes"
-
-
-# directory aliases
+# directories
 alias turing="cd ~/turing"
 alias temp="cd ~/TEMP"
 alias exer="cd ~/exercism"
@@ -69,21 +58,38 @@ alias hack="cd ~/repositories/hacker_rank"
 alias gamin="cd ~/turing/projects/where_is_denver_board_game_night"
 
 
-# spec aliases
+# rails
+alias railsn="rails new -T --database=postgresql --skip-turbolinks"
+alias rs="rails s"
+alias rc="rails c"
+alias routes="rake routes"
+alias ni="rake npm:install:clean"
+
+
+# files
+alias gf="vi Gemfile"
+alias rf="vi Rakefile"
+alias ig="vi .gitignore"
+
+
+# database
+alias dbreset="rake db:reset"
+alias dbreste="rake db:reset"
+alias dbsetup="rake db:setup"
+alias dbdrop="rake db:drop"
+alias dbcreate="rake db:create"
+alias dbmig="rake db:migrate"
+alias dbseed="rake db:seed"
+alias dbroll="rake db:rollback"
+
+
+# spec
 alias spec="rspec"
 alias spush="spec && push"
 
 
-# rails aliases
-alias railsn="rails new -T --database=postgresql --skip-turbolinks"
+# bin spring
 alias dospring="bundle exec spring binstub --all"
-alias rs="rails s"
-alias rc="rails c"
-alias uniw="open http://localhost:3000 && unicorn -p 3000"
-alias uni="unicorn -p 3000"
-
-
-# bin spring aliases
 alias br='bin/rails'
 alias brc='bin/rails c'
 alias brs='bin/rails s'
@@ -91,12 +97,12 @@ alias brk='bin/rake'
 alias bs='bin/rspec'
 
 
-# ember alias
+# ember
 alias ems="ember server -p 3000"
 alias npmbow="npm i && bower i"
 
 
-# exercism aliases
+# exercism
 alias es="exercism submit"
 alias ef="exercism fetch"
 
@@ -108,13 +114,12 @@ alias dcov="rm -rf coverage/"
 
 # heroku
 alias hr="heroku run"
+alias hrr="heroku run rake"
 alias hp="git push heroku master"
 
 
 # misc
 alias be="bundle exec"
-alias gf="vi Gemfile"
-alias ig="vi .gitignore"
 alias la="l -a"
 alias me="open http://github.com/trayo"
 alias reb="source ~/.bash_profile"
