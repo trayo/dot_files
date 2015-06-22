@@ -65,6 +65,7 @@ alias rs="rails s"
 alias rc="rails c"
 alias routes="rake routes"
 alias ni="rake npm:install:clean"
+alias precom="rake assets:precompile"
 
 
 # files
