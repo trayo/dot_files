@@ -71,7 +71,7 @@ endfunction
 
 " custom commands
 command Routes !clear && bin/rake routes
-command GITX !gitx
+command GITX !clear && gitx
 
 
 "" ======= run tests =======
