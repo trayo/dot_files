@@ -47,7 +47,8 @@ nnoremap <Leader>w :noh<CR>:w!<CR>
 
 
 " pasting with auto indent
-nnoremap p ]p
+nnoremap p p=`]
+nnoremap P P=`]
 
 
 " easier pane focus
