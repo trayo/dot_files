@@ -46,6 +46,10 @@ nnoremap <Leader>s :w!<CR>:!bin/rspec %<CR>
 nnoremap <Leader>w :noh<CR>:w!<CR>
 
 
+" pasting with auto indent
+nnoremap p ]p
+
+
 " easier pane focus
 " make left pane fullscreen
 nnoremap <Leader>] <c-w>l<c-w><BAR>0
