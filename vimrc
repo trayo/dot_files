@@ -47,8 +47,8 @@ nnoremap <Leader>w :noh<CR>:w!<CR>
 
 
 " pasting with auto indent
-nnoremap p p=`]
-nnoremap P P=`]
+nnoremap p mqp=`]`q
+nnoremap P mqP=`]`q
 
 
 " easier pane focus
@@ -73,8 +73,29 @@ function! Underscore()
   :exe "normal! \<esc>`q"
 endfunction
 
+" change into Ternary
+command TER :call Ternary()
+command Ternary :call Ternary()
+function! Ternary()
+  :exe "normal! _dwJa? \<esc>"
+  :exe "normal! Jdea : \<esc>"
+  :exe "normal! JJde"
+endfunction
 
-" custom commands
+" change Ternary into if else
+command IFE :call IFE()
+function! IFE()
+  :exe "normal! mq"
+  :exe "normal! Iif \<esc>"
+  :exe "normal! f?Xs\<return>\<esc>"
+  :exe "normal! f:Xs\<return>\<esc>"
+  :exe "normal! Oelse\<esc>"
+  :exe "normal! joend\<esc>"
+  :exe "normal! 'q"
+endfunction
+
+
+" ======== commands ========
 command Routes !clear && bin/rake routes
 command GITX !clear && gitx
 
