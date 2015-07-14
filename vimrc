@@ -73,7 +73,7 @@ function! Underscore()
   :exe "normal! \<esc>`q"
 endfunction
 
-" change into Ternary
+" change if-else into Ternary
 command TER :call Ternary()
 command Ternary :call Ternary()
 function! Ternary()
@@ -82,7 +82,7 @@ function! Ternary()
   :exe "normal! JJde"
 endfunction
 
-" change Ternary into if else
+" change Ternary into if-else
 command IFE :call IFE()
 function! IFE()
   :exe "normal! mq"
