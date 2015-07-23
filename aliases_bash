@@ -39,7 +39,6 @@ alias abort="git rebase --abort"
 # directories
 alias turing="cd ~/turing"
 alias temp="cd ~/TEMP"
-alias exer="cd ~/exercism"
 alias proj="cd ~/turing/projects"
 alias octo="cd ~/turing/octopress"
 alias work="cd ~/turing/workshops"
@@ -104,6 +103,7 @@ alias npmbow="npm i && bower i"
 
 
 # exercism
+alias exer="cd ~/exercism"
 alias es="exercism submit"
 alias ef="exercism fetch"
 
