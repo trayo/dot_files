@@ -106,6 +106,7 @@ alias npmbow="npm i && bower i"
 alias exer="cd ~/exercism"
 alias es="exercism submit"
 alias ef="exercism fetch"
+alias efru="exercism fetch ruby"
 
 
 # simplecov
