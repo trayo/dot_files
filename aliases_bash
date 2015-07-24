@@ -126,6 +126,7 @@ alias la="l -a"
 alias me="open http://github.com/trayo"
 alias reb="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
+alias hb="echo Happy Birthday to me!"
 
 
 # stuff I misspell
