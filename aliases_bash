@@ -55,6 +55,7 @@ alias enig="cd ~/turing/projects/enigma"
 alias hack="cd ~/repositories/hacker_rank"
 alias gamin="cd ~/repositories/where_is_denver_board_game_night"
 alias redem="cd ~/repositories/react-demo"
+alias rps="cd ~/repositories/super_rps"
 
 
 # rails
