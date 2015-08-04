@@ -47,8 +47,10 @@ nnoremap <Leader>w :noh<CR>:w!<CR>
 
 
 " pasting with auto indent
-nnoremap p mqp=`]`q
-nnoremap P mqP=`]`q
+" (commenting out because it messes with ctrl+o in
+" insert mode)
+" nnoremap p mqp=`]`q
+" nnoremap P mqP=`]`q
 
 
 " easier pane focus
