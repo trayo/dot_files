@@ -64,7 +64,7 @@ nnoremap <Leader>= <c-w>=
 " ======== functions ========
 
 " replace spaces with underscore, for minitest test names
-vnoremap <Leader>u :s/\%V /_/g<cr>
+" vnoremap <Leader>u :s/\%V /_/g<cr>
 
 " replace spaces with underscore, for minitest test names
 command U :call Underscore()
@@ -79,13 +79,16 @@ endfunction
 command TER :call Ternary()
 command Ternary :call Ternary()
 function! Ternary()
+  :exe "normal! mq"
   :exe "normal! _dwJa? \<esc>"
   :exe "normal! Jdea : \<esc>"
   :exe "normal! JJde"
+  :exe "normal! `q"
 endfunction
 
 " change Ternary into if-else
 command IFE :call IFE()
+command IfElse :call IFE()
 function! IFE()
   :exe "normal! mq"
   :exe "normal! Iif \<esc>"
@@ -93,8 +96,32 @@ function! IFE()
   :exe "normal! f:Xs\<return>\<esc>"
   :exe "normal! Oelse\<esc>"
   :exe "normal! joend\<esc>"
-  :exe "normal! 'q"
+  :exe "normal! `q"
 endfunction
+
+
+" change do-end into curly braces
+command C :call Curlify()
+command Curlify :call Curlify()
+function! Curlify()
+  :exe "normal! mqV/end\<return>J"
+  :s/ do / { /g
+  :s/ end/ } /g
+  :exe "normal! `q"
+endfunction
+
+" change curly braces into do-end
+command B :call Blockify()
+command Blockify :call Blockify()
+function! Blockify()
+  :exe "normal! mq"
+  :s/ { / do /g
+  :exe "normal! f|;a\<return>\<esc>"
+  :s/ }/end/g
+  :exe ":normal! /end\<return>i\<return>\<esc>"
+  :exe "normal! `q"
+endfunction
+
 
 
 " ======== commands ========
@@ -263,7 +290,6 @@ let g:mustache_abbreviations = 1
 
 " ZoomWin                     https://github.com/vim-scripts/ZoomWin.git
 " nerdtree                    https://github.com/scrooloose/nerdtree.git
-" supertab                    https://github.com/ervandew/supertab.git
 " unite.vim                   https://github.com/Shougo/unite.vim.git
 " vim-coffee-script           https://github.com/kchmck/vim-coffee-script.git
 " vim-commentary              https://github.com/tpope/vim-commentary.git
