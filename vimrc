@@ -75,34 +75,13 @@ function! Underscore()
   :exe "normal! \<esc>`q"
 endfunction
 
-" " change if-else into Ternary
-" command TER :call Ternary()
-" command Ternary :call Ternary()
-" function! Ternary()
-"   :exe "normal! _dwJa? \<esc>"
-"   :exe "normal! Jdea : \<esc>"
-"   :exe "normal! JJde"
-" endfunction
-
-" " change Ternary into if-else
-" command IFE :call IFE()
-" function! IFE()
-"   :exe "normal! mq"
-"   :exe "normal! Iif \<esc>"
-"   :exe "normal! f?Xs\<return>\<esc>"
-"   :exe "normal! f:Xs\<return>\<esc>"
-"   :exe "normal! Oelse\<esc>"
-"   :exe "normal! joend\<esc>"
-"   :exe "normal! 'q"
-" endfunction
-
 
 " ======== commands ========
 command Routes !clear && bin/rake routes
 command GITX !clear && gitx
 
 
-"" ======= run tests =======
+" ======= run tests =======
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
