@@ -183,7 +183,7 @@ function updatedotfiles {
 
   # copies and zips bundle folder without the .git folders
   rsync -av --progress ~/.vim/bundle/. ~/repositories/dot_files/bundle/ --exclude=".git"
-  zip -rf bundle.zip bundle/
+  zip -rfq bundle.zip bundle/
   rm -rf bundle/
 
   git add .
