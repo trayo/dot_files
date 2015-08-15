@@ -181,10 +181,10 @@ function updatedotfiles {
   # cd and preserve last location
   pushd ~/repositories/dot_files
 
-  # # copies and zips bundle folder without the .git folders
-  # rsync -avq --progress ~/.vim/bundle/. ~/repositories/dot_files/bundle/ --exclude=".git"
-  # zip -rfq bundle.zip bundle/
-  # rm -rf bundle/
+  # copies and zips bundle folder without the .git folders
+  rsync -avq --progress ~/.vim/bundle/. ~/repositories/dot_files/bundle/ --exclude=".git"
+  zip -rfq bundle.zip bundle/
+  rm -rf bundle/
 
   git add .
 
