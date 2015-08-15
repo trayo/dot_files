@@ -179,7 +179,7 @@ function updatedotfiles {
   cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
 
   # copies bundle folder without the .git folders
-  rsync -av --progress ~/.vim/bundle/ ~/repositories/dot_files/bundle/ --exclude=".git"
+  rsync -av --progress ~/.vim/bundle/. ~/repositories/dot_files/bundle/ --exclude=".git"
   pushd ~/repositories/dot_files
   git add .
 
