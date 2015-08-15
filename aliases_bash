@@ -178,11 +178,15 @@ function updatedotfiles {
   cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
   cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
 
-  # copies bundle folder without the .git folders
-  # rsync -av --progress ~/.vim/bundle/. ~/repositories/dot_files/bundle/ --exclude=".git"
-  # zip ~/repositories/dot_files/bundle.zip ~/repositories/dot_files/bundle/
-
+  # cd and preserve last location
   pushd ~/repositories/dot_files
+
+  # copies and zips bundle folder without the .git folders
+  rm -rf bundle.zip
+  rsync -av --progress ~/.vim/bundle/. ~/repositories/dot_files/bundle/ --exclude=".git"
+  zip -r bundle.zip bundle/
+  rm -rf bundle/
+
   git add .
 
   # if there are no arguments, use a default message
