@@ -176,6 +176,7 @@ function updatedotfiles {
   cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
   cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
   cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
+  cp -r ~/.vim/bundle/    ~/repositories/dot_files/bundle/
   pushd ~/repositories/dot_files
   git add .
 
