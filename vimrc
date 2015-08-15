@@ -252,31 +252,40 @@ let g:netrw_liststyle= 3
 
 
 "" ========== vim-textobj-rubyblock ==========
-runtime macros/matchit.vim " a dependency
+" runtime macros/matchit.vim " a dependency
 
 
-"" ========== Mustache helper ===========
-let g:mustache_abbreviations = 1
+" ========== pathogen plugins ==========
 
-
-" ========== Pathogen plugins ==========
-
-" ZoomWin                     https://github.com/vim-scripts/ZoomWin.git
+" ctrlp                       https://github.com/kien/ctrlp.vim
 " nerdtree                    https://github.com/scrooloose/nerdtree.git
+" rainbow parenthesis         https://github.com/eapache/rainbow_parentheses.vim
+" vim-commentary              https://github.com/tpope/vim-commentary.git
+" vim-javascript              https://github.com/pangloss/vim-javascript.git
+" vim-jsx                     https://github.com/mxw/vim-jsx
+" vim-powerline               https://github.com/Lokaltog/vim-powerline.git
+" vim-react-snippets          https://github.com/justinj/vim-react-snippets
+" vim-ruby                    https://github.com/vim-ruby/vim-ruby.git
+" vim-ruby-collapse           https://github.com/trayo/vim-ruby-collapse
+" vim-slim                    https://github.com/slim-template/vim-slim
+" vim-snipmate                https://github.com/garbas/vim-snipmate
+  " tlib                      https://github.com/tomtom/tlib_vim.git
+  " addon-mw-utils            https://github.com/MarcWeber/vim-addon-mw-utils.git
+  " vim-snippets              https://github.com/honza/vim-snippets.git
+
+" vim-test                    https://github.com/janko-m/vim-test
+
+
+" ========== not using ==========
+
 " supertab                    https://github.com/ervandew/supertab.git
 " unite.vim                   https://github.com/Shougo/unite.vim.git
-" vim-coffee-script           https://github.com/kchmck/vim-coffee-script.git
-" vim-commentary              https://github.com/tpope/vim-commentary.git
 " vim-endwise                 https://github.com/tpope/vim-endwise.git
 " vim-fish                    https://github.com/dag/vim-fish.git
 " vim-fugitive                https://github.com/tpope/vim-fugitive.git
-" hdevtools                   https://github.com/bitc/hdevtools.git
-" vim-javascript              https://github.com/pangloss/vim-javascript.git
-" vim-powerline               https://github.com/Lokaltog/vim-powerline.git
 " vim-repeat                  https://github.com/tpope/vim-repeat.git
 " vim-rspec                   https://github.com/skwp/vim-rspec.git
-" vim-ruby                    https://github.com/vim-ruby/vim-ruby.git
 " vim-surround                https://github.com/tpope/vim-surround.git
 " vim-textobj-rubyblock       https://github.com/nelstrom/vim-textobj-rubyblock.git
 " vim-textobj-user            https://github.com/kana/vim-textobj-user.git
-" vim-ctrlp                   https://github.com/kien/ctrlp.vim
+
