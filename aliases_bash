@@ -169,6 +169,7 @@ function push {
 }
 
 # easy update dot files
+alias udf=updatedotfiles
 function updatedotfiles {
 
   cp ~/.pryrc             ~/repositories/dot_files/pryrc
