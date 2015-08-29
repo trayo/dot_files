@@ -22,6 +22,7 @@ set expandtab                                             " use spaces, not tabs
 set backspace=indent,eol,start                            " backspace through everything in insert mode
 
 
+" highlights characters on the 80th line
 highlight OverLength ctermbg=240 ctermfg=white
 call matchadd('OverLength', '\%81v.', 100)
 
