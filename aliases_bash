@@ -13,6 +13,7 @@ alias gd="git diff --patience --ignore-space-change"
 alias gc="git checkout"
 alias gb="git branch"
 alias ga="git add"
+alias gap="git add -p"
 alias gh="git hist"
 alias fp="git push -f"
 alias gcv="git commit -v"
@@ -122,6 +123,10 @@ alias hrr="heroku run rake"
 alias hp="git push heroku master"
 
 
+# golang
+alias gobench="go test -bench ."
+
+
 # misc
 alias be="bundle exec"
 alias la="l -a"
@@ -129,6 +134,7 @@ alias me="open http://github.com/trayo"
 alias reb="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
 alias hb="echo Happy Birthday to me!"
+alias readme="vim README.md"
 
 
 # stuff I misspell

@@ -7,7 +7,7 @@ syntax on
 set nobackup                                              " no backup files
 set nowritebackup                                         " only in case you don't want a backup file while editing
 set noswapfile                                            " no swap files
-set scrolloff=4                                           " adds top/bottom buffer between cursor and window
+set scrolloff=2                                           " adds top/bottom buffer between cursor and window
 set cursorline                                            " colours the line the cursor is on
 set number                                                " line numbers
 set clipboard=unnamed                                     " allows y and p to clipboard vim > 7.4
@@ -42,9 +42,11 @@ nmap <Leader>r :redraw!<CR>
 
 nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
-nnoremap <Leader>s :w!<CR>:!bin/rspec %<CR>
+" nnoremap <Leader>s :w!<CR>:!bin/rspec %<CR>
 " nnoremap <Leader>t :w!<CR>:!ruby %<CR>
 nnoremap <Leader>w :noh<CR>:w!<CR>
+command W :w
+command Q :q
 
 
 " pasting with auto indent
