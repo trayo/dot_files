@@ -43,7 +43,6 @@ alias turing="cd ~/turing"
 alias temp="cd ~/TEMP"
 alias proj="cd ~/turing/projects"
 alias octo="cd ~/turing/octopress"
-alias repo="cd ~/repositories"
 alias work="cd ~/workspace"
 
 
@@ -54,10 +53,10 @@ alias din="cd ~/turing/projects/dinner_dash"
 alias piv="cd ~/turing/projects/the_pivot"
 alias list="cd ~/turing/projects/mv_listr"
 alias enig="cd ~/turing/projects/enigma"
-alias hack="cd ~/repositories/hacker_rank"
-alias gamin="cd ~/repositories/where_is_denver_board_game_night"
-alias redem="cd ~/repositories/react-demo"
-alias rps="cd ~/repositories/super_rps"
+alias hack="cd ~/workspace/hacker_rank"
+alias gamin="cd ~/workspace/where_is_denver_board_game_night"
+alias redem="cd ~/workspace/react-demo"
+alias rps="cd ~/workspace/super_rps"
 
 
 # rails
@@ -179,17 +178,17 @@ function push {
 alias udf=updatedotfiles
 function updatedotfiles {
 
-  cp ~/.pryrc             ~/repositories/dot_files/pryrc
-  cp ~/.vimrc             ~/repositories/dot_files/vimrc
-  cp ~/.gitignore_global  ~/repositories/dot_files/gitignore_global
-  cp ~/.bash_profile      ~/repositories/dot_files/bash_profile
-  cp ~/.aliases.bash      ~/repositories/dot_files/aliases_bash
+  cp ~/.pryrc             ~/workspace/dot_files/pryrc
+  cp ~/.vimrc             ~/workspace/dot_files/vimrc
+  cp ~/.gitignore_global  ~/workspace/dot_files/gitignore_global
+  cp ~/.bash_profile      ~/workspace/dot_files/bash_profile
+  cp ~/.aliases.bash      ~/workspace/dot_files/aliases_bash
 
   # cd and preserve last location
-  pushd ~/repositories/dot_files
+  pushd ~/workspace/dot_files
 
   # copies and zips bundle folder without the .git folders
-  rsync -avq --progress ~/.vim/bundle/. ~/repositories/dot_files/bundle/ --exclude=".git"
+  rsync -avq --progress ~/.vim/bundle/. ~/workspace/dot_files/bundle/ --exclude=".git"
   zip -rfq bundle.zip bundle/
   rm -rf bundle/
 
