@@ -57,6 +57,7 @@ alias hack="cd ~/workspace/hacker_rank"
 alias gamin="cd ~/workspace/where_is_denver_board_game_night"
 alias redem="cd ~/workspace/react-demo"
 alias rps="cd ~/workspace/super_rps"
+alias gomast="cd ~/workspace/go_mastermind"
 
 
 # rails
@@ -130,10 +131,11 @@ alias gobench="go test -bench ."
 alias be="bundle exec"
 alias la="l -a"
 alias me="open http://github.com/trayo"
-alias reb="source ~/.bash_profile"
+alias reload="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
 alias hb="echo Happy Birthday to me!"
 alias readme="vim README.md"
+alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
 
 
 # stuff I misspell
