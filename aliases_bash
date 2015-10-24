@@ -151,6 +151,7 @@ alias eit="exit"
 # -o suppress group
 # -h humanize sizes
 # -q print nongraphic chars as question marks
+alias ll="ls -lFGgohq"
 alias l="ls -lFGgohq"
 
 
