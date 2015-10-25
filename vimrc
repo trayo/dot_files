@@ -44,7 +44,8 @@ nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
 nnoremap <Leader>q :q!<CR>
 " nnoremap <Leader>s :w!<CR>:!bin/rspec %<CR>
 " nnoremap <Leader>t :w!<CR>:!ruby %<CR>
-nnoremap <Leader>w :noh<CR>:w!<CR>
+nnoremap <Leader>w :w!<CR>
+nnoremap <Space> :noh<CR>
 command W :w
 command Q :q
 

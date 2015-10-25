@@ -135,6 +135,7 @@ alias reload="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
 alias hb="echo Happy Birthday to me!"
 alias readme="vim README.md"
+alias gemfile="vim Gemfile"
 alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
 
 
@@ -151,16 +152,16 @@ alias eit="exit"
 # -o suppress group
 # -h humanize sizes
 # -q print nongraphic chars as question marks
-alias ll="ls -lFGgohq"
-alias l="ls -lFGgohq"
+alias ll="ls -lFGgohqa"
+alias l="ls -lFGgohqa"
 
 
 ########## functions ##########
 
 # overrides default cd to send alias l afterwards
-function cd {
-  command cd $1 && l
-}
+# function cd {
+#   command cd "$1" && ll
+# }
 
 # easy cd ../../.. alias
 function .. {
