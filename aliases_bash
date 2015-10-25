@@ -47,16 +47,8 @@ alias work="cd ~/workspace"
 
 
 # projects
-alias mast="cd ~/turing/projects/mastermind"
-alias sales="cd ~/turing/projects/sales_engine"
-alias din="cd ~/turing/projects/dinner_dash"
-alias piv="cd ~/turing/projects/the_pivot"
 alias list="cd ~/turing/projects/mv_listr"
-alias enig="cd ~/turing/projects/enigma"
-alias hack="cd ~/workspace/hacker_rank"
 alias gamin="cd ~/workspace/where_is_denver_board_game_night"
-alias redem="cd ~/workspace/react-demo"
-alias rps="cd ~/workspace/super_rps"
 alias gomast="cd ~/workspace/go_mastermind"
 
 
@@ -65,12 +57,13 @@ alias railsn="rails new -T --database=postgresql --skip-turbolinks"
 alias rs="rails s"
 alias rc="rails c"
 alias routes="rake routes"
-alias ni="rake npm:install:clean"
 alias precom="rake assets:precompile"
 
 
 # files
+alias readme="vim README.md"
 alias gf="vi Gemfile"
+alias gemfile="vim Gemfile"
 alias rf="vi Rakefile"
 alias ig="vi .gitignore"
 
@@ -134,8 +127,6 @@ alias me="open http://github.com/trayo"
 alias reload="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
 alias hb="echo Happy Birthday to me!"
-alias readme="vim README.md"
-alias gemfile="vim Gemfile"
 alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
 
 
@@ -227,9 +218,4 @@ command rerun busted $1 -cbp "**/*.lua"
 # rerun shortcut for running go tests
 function rego {
 command rerun go test -cbp "**/*.go"
-}
-
-# rerun shortcut for running javascript tests
-function rejs {
-command rerun jasmine-node $1 -cbp "**/*.js"
 }
