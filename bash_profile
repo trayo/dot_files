@@ -21,9 +21,9 @@ source ~/.nvm/nvm.sh
 export PATH="bin:$PATH"
 
 # Go path
-export GOROOT=$HOME/go
-export GOPATH=/usr/local/go/
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go/
+export PATH=$PATH:$GOROOT/bin
 
 # Take you to the dir of a file in a gem. e.g. `2gem rspec`
 2gem () {
