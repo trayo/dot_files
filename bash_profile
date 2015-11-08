@@ -17,11 +17,11 @@ eval "$(hub alias -s)"
 # Load nvm so you can access 'node'
 source ~/.nvm/nvm.sh
 
-# Load bin
+# Load bin on path
 export PATH="bin:$PATH"
 
 # Go path
-export GOPATH=~/go
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Take you to the dir of a file in a gem. e.g. `2gem rspec`

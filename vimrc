@@ -166,6 +166,16 @@ cmap %% <C-R>=expand("%")<CR>
 au  BufRead,BufNewFile *.elm setfiletype haskell
 
 
+"" ======= golang ========
+" format with goimports instead of gofmt
+let g:go_fmt_command = "goimports"
+
+au FileType qf call AdjustWindowHeight(2, 6)
+function! AdjustWindowHeight(minheight, maxheight)
+  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
+
+
 "" ======= always rainbow parens ========
 augroup RainbowParens
   autocmd!
@@ -255,20 +265,11 @@ let g:netrw_liststyle= 3
   " tlib                      https://github.com/tomtom/tlib_vim.git
   " addon-mw-utils            https://github.com/MarcWeber/vim-addon-mw-utils.git
   " vim-snippets              https://github.com/honza/vim-snippets.git
-
 " vim-test                    https://github.com/janko-m/vim-test
 
 
 " ========== not using ==========
 
-" supertab                    https://github.com/ervandew/supertab.git
-" unite.vim                   https://github.com/Shougo/unite.vim.git
-" vim-endwise                 https://github.com/tpope/vim-endwise.git
-" vim-fish                    https://github.com/dag/vim-fish.git
-" vim-fugitive                https://github.com/tpope/vim-fugitive.git
-" vim-repeat                  https://github.com/tpope/vim-repeat.git
 " vim-rspec                   https://github.com/skwp/vim-rspec.git
 " vim-surround                https://github.com/tpope/vim-surround.git
-" vim-textobj-rubyblock       https://github.com/nelstrom/vim-textobj-rubyblock.git
-" vim-textobj-user            https://github.com/kana/vim-textobj-user.git
 

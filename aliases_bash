@@ -9,6 +9,7 @@ alias vi="vim"
 
 # git
 alias gs="git status"
+alias gst="git status"
 alias gd="git diff --patience --ignore-space-change"
 alias gc="git checkout"
 alias gb="git branch"
@@ -128,6 +129,7 @@ alias reload="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
 alias hb="echo Happy Birthday to me!"
 alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
+alias tet="cd $HOME && mame -rompath ~/roms"
 
 
 # stuff I misspell
@@ -150,9 +152,9 @@ alias l="ls -lFGgohqa"
 ########## functions ##########
 
 # overrides default cd to send alias l afterwards
-# function cd {
-#   command cd "$1" && ll
-# }
+function cd {
+  command cd "$@" && ll
+}
 
 # easy cd ../../.. alias
 function .. {
@@ -207,15 +209,19 @@ function updatedotfiles {
 
 # overrides rerun to use -c and -b by default
 function reruby {
-command rerun $1 -cb
+  command rerun $1 -cb
 }
 
 # rerun shortcut for running lua tests
 function relua {
-command rerun busted $1 -cbp "**/*.lua"
+  command rerun busted $1 -cbp "**/*.lua"
 }
 
 # rerun shortcut for running go tests
 function rego {
-command rerun go test -cbp "**/*.go"
+  command rerun go test -cbp "**/*.go"
+}
+
+function regink {
+  command rerun ginkgo -cbp "**/*.go"
 }
