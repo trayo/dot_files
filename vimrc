@@ -181,14 +181,10 @@ endfunction
 
 
 "" ======= always rainbow parens ========
-augroup RainbowParens
-  autocmd!
-  autocmd VimEnter * RainbowParenthesesToggle
-  autocmd BufEnter * RainbowParenthesesLoadRound
-  autocmd BufEnter * RainbowParenthesesLoadSquare
-  autocmd BufEnter * RainbowParenthesesLoadBraces
-augroup END
-
+let g:rainbow_conf = {
+\   'ctermfgs': ['blue', 'red', 'cyan', 'magenta', 'yellow', 'white'],
+\}
+let g:rainbow_active = 1
 
 "" ==========  These come from Mislav (http://mislav.uniqpath.com/2011/12/vim-revisited/)  ==========
 set nocompatible                " choose no compatibility with legacy vi
