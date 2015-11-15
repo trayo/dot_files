@@ -21,6 +21,8 @@ set tabstop=2 shiftwidth=2                                " a tab is two spaces 
 set expandtab                                             " use spaces, not tabs (optional)
 set backspace=indent,eol,start                            " backspace through everything in insert mode
 
+" disable indent on : and - for yml files
+autocmd FileType yaml setl indentkeys-=<:>
 
 " highlights characters on the 80th line
 highlight OverLength ctermbg=240 ctermfg=white

@@ -1,4 +1,8 @@
-source ~/.profile
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
@@ -14,16 +18,12 @@ source ~/.aliases.bash
 # enables 'git hub'
 eval "$(hub alias -s)"
 
-# Load nvm so you can access 'node'
-source ~/.nvm/nvm.sh
-
 # Load bin on path
 export PATH="bin:$PATH"
 
 # Go path
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/go/
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
 
 # Take you to the dir of a file in a gem. e.g. `2gem rspec`
 2gem () {
