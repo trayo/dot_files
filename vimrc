@@ -21,57 +21,66 @@ set tabstop=2 shiftwidth=2                                " a tab is two spaces 
 set expandtab                                             " use spaces, not tabs (optional)
 set backspace=indent,eol,start                            " backspace through everything in insert mode
 
-" disable indent on : and - for yml files
+
+" ========= misc =========
+" disable auto indent on : and - for yml files
 autocmd FileType yaml setl indentkeys-=<:>
 
 " highlights characters on the 80th line
 highlight OverLength ctermbg=240 ctermfg=white
 call matchadd('OverLength', '\%81v.', 100)
 
+" change highlight text colors to black
+highlight Visual ctermfg=1
 
-"" ========= Shortcut commands =========
 " in visual mode, "." will for each line, go into normal mode and execute the "."
-vnoremap . :norm.<CR>
+vnoremap . :norm.<CR>a
 
-nmap <Leader>c oconsole.log();<c-o>h
+" spacebar sends no highlight
+nnoremap <Space> :noh<CR>
+
+command Routes !clear && bin/rake routes
+command GITX !clear && gitx
+
+" make ctrl+e and ctrl+y scroll 2 lines
+nnoremap <C-e> 2<C-e>
+nnoremap <C-y> 2<C-y>
+
+" Disable ex mode and man pages
+map Q <Nop>
+map K <Nop>
+
+
+" ========= leader snippets =========
 nmap <Leader>e :NERDTreeToggle<CR>
-" no highlight
-nmap <Leader>g :noh<CR>
-" pry insertion
-nmap <Leader>p orequire 'pry' ; binding.pry<ESC>:w<CR>
 nmap <Leader>r :redraw!<CR>
 
-
-nnoremap <Leader>bb :w!<CR>:!bundle install<CR>
+" write/quit mappings
 nnoremap <Leader>q :q!<CR>
-" nnoremap <Leader>s :w!<CR>:!bin/rspec %<CR>
-" nnoremap <Leader>t :w!<CR>:!ruby %<CR>
 nnoremap <Leader>w :w!<CR>
-nnoremap <Space> :noh<CR>
 command W :w
 command Q :q
-
-
-" pasting with auto indent
-" (commenting out because it messes with ctrl+o in
-" insert mode)
-" nnoremap p mqp=`]`q
-" nnoremap P mqP=`]`q
-
-
-" easier pane focus
-" make left pane fullscreen
-nnoremap <Leader>] <c-w>l<c-w><BAR>0
-" make right pane fullscreen
-nnoremap <Leader>[ <c-w>h<c-w><BAR>0
-nnoremap <Leader>= <c-w>=
-
-
-" ======== functions ========
 
 " replace spaces with underscore, for minitest test names
 vnoremap <Leader>u :s/\%V /_/g<cr>
 
+
+" ========= easier pane navigation =========
+" make left pane fullscreen
+nnoremap <Leader>] <c-w>l<c-w><BAR>0
+" make right pane fullscreen
+nnoremap <Leader>[ <c-w>h<c-w><BAR>0
+" make panes equal size
+nnoremap <Leader>= <c-w>=
+
+
+" ========= pasting with auto indent =========
+" (commenting out because it messes with ctrl+o in insert mode)
+" nnoremap p mqp=`]`q
+" nnoremap P mqP=`]`q
+
+
+" ======== functions ========
 " replace spaces with underscore, for minitest test names
 command U :call Underscore()
 command Underscore :call Underscore()
@@ -82,11 +91,6 @@ function! Underscore()
 endfunction
 
 
-" ======== commands ========
-command Routes !clear && bin/rake routes
-command GITX !clear && gitx
-
-
 " ======= run tests =======
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
@@ -95,23 +99,8 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 
-" === No longer needed with vim 7.4 ===
-" paste without being stupid, that works
-" nnoremap <Leader>v :r !pbpaste<CR>
-" copy without being stupid, that works
-" vnoremap <Leader>c :w !pbcopy<CR><CR>
-
-
-" Disable Ex mode
-map Q <Nop>
-" Disable K looking stuff up
-map K <Nop>
-
-
-" move lines up and down
+" ======= move lines up and down =======
 " uses ctrl-j and ctrl-k
-" nnoremap <C-j> :m .+1<CR>==
-" nnoremap <C-k> :m .-2<CR>==
 inoremap <C-j> <ESC>:m .+1<CR>==gi
 inoremap <C-k> <ESC>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
@@ -125,18 +114,16 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 
-" Command navigation
+" ======= command navigation =======
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
-cnoremap <Esc>b <S-Left> " commenting out b/c makes it pause
-cnoremap <Esc>f <S-Right>
-cnoremap <M-b> <S-Left>
-cnoremap <M-f> <S-Right>
+" cnoremap <M-b> <S-Left>
+" cnoremap <M-f> <S-Right>
 
 
-" Command editing
+" ======= command editing =======
 cnoremap <M-p> <Up>
 cnoremap <M-n> <Down>
 cnoremap <C-k> <C-f>d$<C-c><End>
@@ -144,7 +131,7 @@ cnoremap <C-y> <C-r><C-o>"
 cnoremap <C-d> <Right><C-h>
 
 
-"" strip trailing whitespace
+" ======= string trailing whitespace =======
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
   let _s=@/
@@ -159,13 +146,10 @@ endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 
+" ======= easy directory substitution =======
 " replaces %/ with current directory, and %% with current file
 cmap %/ <C-R>=expand("%:p:h")."/"<CR>
 cmap %% <C-R>=expand("%")<CR>
-
-
-"" filetypes
-au  BufRead,BufNewFile *.elm setfiletype haskell
 
 
 "" ======= golang ========
@@ -176,6 +160,9 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" adjust quickfix window height
+" not needed after installing syntastic
 au FileType qf call AdjustWindowHeight(2, 6)
 function! AdjustWindowHeight(minheight, maxheight)
   exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
@@ -187,6 +174,7 @@ let g:rainbow_conf = {
 \   'ctermfgs': ['blue', 'red', 'cyan', 'magenta', 'yellow', 'white'],
 \}
 let g:rainbow_active = 1
+
 
 "" ==========  These come from Mislav (http://mislav.uniqpath.com/2011/12/vim-revisited/)  ==========
 set nocompatible                " choose no compatibility with legacy vi
@@ -215,10 +203,7 @@ call Pl#Theme#RemoveSegment('fileencoding')
 call Pl#Theme#RemoveSegment('filetype')
 
 
-"" ========== nerdtree ==========
-" Make NERDTree open when vim opens
-" autocmd vimenter * NERDTree
-
+" ========== nerdtree ==========
 " ignore files or folders in nerdtree
 let NERDTreeIgnore=['\coverage']
 
@@ -226,10 +211,11 @@ let NERDTreeIgnore=['\coverage']
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
-"" ========== ignore certain folders with ctrlp ==========
+" ========== ignore certain folders with ctrlp ==========
 set wildignore+=*tmp/*,*coverage/*,*bower_components/*,*node_modules/*,*.rvm*
 
-" the silver searcher
+
+" ======= use the silver searcher for searching =======
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -240,14 +226,6 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
-
-"" ========== Default Tree Type ==========
-let g:netrw_liststyle= 3
-
-
-"" ========== vim-textobj-rubyblock ==========
-" runtime macros/matchit.vim " a dependency
 
 
 " ========== pathogen plugins ==========
@@ -268,10 +246,4 @@ let g:netrw_liststyle= 3
   " addon-mw-utils            https://github.com/MarcWeber/vim-addon-mw-utils.git
   " vim-snippets              https://github.com/honza/vim-snippets.git
 " vim-test                    https://github.com/janko-m/vim-test
-
-
-" ========== not using ==========
-
-" vim-rspec                   https://github.com/skwp/vim-rspec.git
-" vim-surround                https://github.com/tpope/vim-surround.git
 
