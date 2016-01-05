@@ -92,14 +92,6 @@ function! Underscore()
 endfunction
 
 
-" ======= run tests =======
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
-
-
 " ======= move lines up and down =======
 " uses ctrl-j and ctrl-k
 inoremap <C-j> <ESC>:m .+1<CR>==gi
