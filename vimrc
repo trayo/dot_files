@@ -31,7 +31,7 @@ highlight OverLength ctermbg=240 ctermfg=white
 call matchadd('OverLength', '\%81v.', 100)
 
 " change highlight text colors to black
-highlight Visual ctermfg=1
+highlight Visual ctermfg=7 ctermbg=8
 
 " in visual mode, "." will for each line, go into normal mode and execute the "."
 vnoremap . :norm.<CR>a
@@ -47,13 +47,14 @@ nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 
 " Disable ex mode and man pages
-map Q <Nop>
-map K <Nop>
+nnoremap Q <Nop>
+nnoremap K <Nop>
 
 
 " ========= leader snippets =========
 nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>r :redraw!<CR>
+nmap <Leader>d :GoDoc<CR>
 
 " write/quit mappings
 nnoremap <Leader>q :q!<CR>
@@ -160,6 +161,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_fmt_fail_silently = 1
 
 " adjust quickfix window height
 " not needed after installing syntastic

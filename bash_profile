@@ -1,9 +1,7 @@
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
+# load rbenv
+eval "$(rbenv init -)"
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
+# load bins
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
 # support for postgres

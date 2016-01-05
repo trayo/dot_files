@@ -5,6 +5,7 @@ alias bashp="vim ~/.bash_profile"
 alias vimrc="vim ~/.vimrc"
 alias als="vim ~/.aliases.bash"
 alias vi="vim"
+alias vimb="cd ~/.vim/bundle"
 
 
 # git
