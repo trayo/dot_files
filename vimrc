@@ -2,6 +2,8 @@ set rtp+=/usr/local/go/misc/vim
 filetype plugin indent on
 syntax on
 
+"" ==========  Pathogen, vim path manager (https://github.com/tpope/vim-pathogen#readme)  ==========
+call pathogen#infect()
 
 "" ==========  Basic setup stuff   ==========
 set nobackup                                              " no backup files
@@ -145,7 +147,7 @@ cmap %/ <C-R>=expand("%:p:h")."/"<CR>
 cmap %% <C-R>=expand("%")<CR>
 
 
-"" ======= golang ========
+" ======= golang ========
 " format with goimports instead of gofmt
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
@@ -155,12 +157,18 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_fail_silently = 1
 
+
+" ======= syntastic ========
+let g:syntastic_go_checkers = ['go', 'gofmt']
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " adjust quickfix window height
 " not needed after installing syntastic
-au FileType qf call AdjustWindowHeight(2, 6)
-function! AdjustWindowHeight(minheight, maxheight)
-  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
-endfunction
+" au FileType qf call AdjustWindowHeight(2, 6)
+" function! AdjustWindowHeight(minheight, maxheight)
+"   exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+" endfunction
 
 
 "" ======= always rainbow parens ========
@@ -176,10 +184,6 @@ syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
-
-
-"" ==========  Pathogen, vim path manager (https://github.com/tpope/vim-pathogen#readme)  ==========
-call pathogen#infect()
 
 
 "" ==========  Powerline, toolbar (https://github.com/Lokaltog/vim-powerline/) ==========

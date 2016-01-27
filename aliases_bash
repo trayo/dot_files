@@ -46,6 +46,7 @@ alias temp="cd ~/TEMP"
 alias proj="cd ~/turing/projects"
 alias octo="cd ~/turing/octopress"
 alias work="cd ~/workspace"
+alias dot="cd ~/workspace/dot_files"
 
 
 # projects
@@ -130,7 +131,7 @@ alias reload="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
 alias hb="echo Happy Birthday to me!"
 alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
-alias tet="cd $HOME && mame -rompath ~/roms"
+alias tet="cd ~/mame && mame -rompath ~/mame/roms -multikeyboard"
 
 
 # stuff I misspell
@@ -177,7 +178,6 @@ alias udf=updatedotfiles
 function updatedotfiles {
 
   cp ~/.pryrc             ~/workspace/dot_files/pryrc
-  cp ~/.vimrc             ~/workspace/dot_files/vimrc
   cp ~/.gitignore_global  ~/workspace/dot_files/gitignore_global
   cp ~/.bash_profile      ~/workspace/dot_files/bash_profile
   cp ~/.aliases.bash      ~/workspace/dot_files/aliases_bash
