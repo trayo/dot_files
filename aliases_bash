@@ -176,12 +176,6 @@ function push {
 # easy update dot files
 alias udf=updatedotfiles
 function updatedotfiles {
-
-  cp ~/.pryrc             ~/workspace/dot_files/pryrc
-  cp ~/.gitignore_global  ~/workspace/dot_files/gitignore_global
-  cp ~/.bash_profile      ~/workspace/dot_files/bash_profile
-  cp ~/.aliases.bash      ~/workspace/dot_files/aliases_bash
-
   # cd and preserve last location
   pushd ~/workspace/dot_files
 
