@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+  ~/.aliases.bash: aliases_bash
+    force: true
+  ~/.bash_profile: bash_profile
+    force: true
+  ~/.gitignore_global: gitignore_global
+    force: true
+  ~/.pryrc: pryrc
+    force: true
+  # ~/.vim: vim/
+  #   force: true
+  ~/.vimrc: vimrc
+    force: true
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
