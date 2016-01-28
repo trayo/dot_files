@@ -20,8 +20,9 @@ alias gh="git hist"
 alias fp="git push -f"
 alias gcv="git commit -v"
 alias gcm="git commit -m"
-alias amend="git commit --amend"
 alias gcb="git checkout -b"
+alias grv="git remote -v"
+alias amend="git commit --amend"
 alias brah="git browse"
 alias brahp="git browse -- pulls"
 alias pull="git pull"
@@ -52,7 +53,7 @@ alias dot="cd ~/workspace/dot_files"
 # projects
 alias list="cd ~/turing/projects/mv_listr"
 alias gamin="cd ~/workspace/where_is_denver_board_game_night"
-alias gomast="cd ~/workspace/go_mastermind"
+alias gomast="cd ~/go/src/github.com/trayo/go_mastermind"
 
 
 # rails
