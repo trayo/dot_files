@@ -180,17 +180,11 @@ function updatedotfiles {
   # cd and preserve last location
   pushd ~/workspace/dot_files
 
-  # copies and zips bundle folder without the .git folders
-  rsync -avq --progress ~/.vim/bundle/. ~/workspace/dot_files/bundle/ --exclude=".git"
-  zip -rfq bundle.zip bundle/
-  rm -rf bundle/
-
   git add .
 
   # if there are no arguments, use a default message
   # otherwise you can supply a message with '$ updatedotfiles "your message here"'
-  if [ $# -eq 0 ]
-  then
+  if [ $# -eq 0 ]; then
     git commit -m "updated dot files"
   else
     git commit -m "$1"
