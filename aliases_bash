@@ -132,7 +132,8 @@ alias reload="source ~/.bash_profile"
 alias shotgun="clear && shotgun -p 3000"
 alias hb="echo Happy Birthday to me!"
 alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
-alias tet="cd ~/mame && mame -rompath ~/mame/roms -multikeyboard"
+alias domame="clear && cd ~/mame && mame -rompath ~/mame/roms -multikeyboard"
+alias tet="clear && cd ~/mame && mame tgm2p -rompath ~/mame/roms -multikeyboard"
 
 
 # stuff I misspell
