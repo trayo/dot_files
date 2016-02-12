@@ -162,24 +162,16 @@ let g:go_fmt_fail_silently = 1
 let g:syntastic_go_checkers = ['go', 'gofmt']
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
-" adjust quickfix window height
-" not needed after installing syntastic
-" au FileType qf call AdjustWindowHeight(2, 6)
-" function! AdjustWindowHeight(minheight, maxheight)
-"   exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
-" endfunction
 
 
-"" ======= always rainbow parens ========
+" ======= always rainbow parens ========
 let g:rainbow_conf = {
 \   'ctermfgs': ['blue', 'red', 'cyan', 'magenta', 'yellow', 'white'],
 \}
 let g:rainbow_active = 1
 
 
-"" ==========  These come from Mislav (http://mislav.uniqpath.com/2011/12/vim-revisited/)  ==========
+" ==========  These come from Mislav (http://mislav.uniqpath.com/2011/12/vim-revisited/)  ==========
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable
 set encoding=utf-8
@@ -187,7 +179,7 @@ set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 
 
-"" ==========  Powerline, toolbar (https://github.com/Lokaltog/vim-powerline/) ==========
+" ==========  Powerline, toolbar (https://github.com/Lokaltog/vim-powerline/) ==========
 let g:Powerline_symbols = 'compatible'
 let g:Powerline_stl_path_style = 'relative'
 set laststatus=2   " Always show the statusline
