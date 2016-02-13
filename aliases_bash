@@ -106,7 +106,6 @@ alias npmbow="npm i && bower i"
 alias exer="cd ~/exercism"
 alias es="exercism submit"
 alias ef="exercism fetch"
-alias efru="exercism fetch ruby"
 
 
 # simplecov
@@ -129,16 +128,18 @@ alias be="bundle exec"
 alias la="l -a"
 alias me="open http://github.com/trayo"
 alias reload="source ~/.bash_profile"
-alias shotgun="clear && shotgun -p 3000"
-alias hb="echo Happy Birthday to me!"
 alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
+
+
+#mame
 alias domame="clear && cd ~/mame && mame -rompath ~/mame/roms -multikeyboard"
 alias tet="clear && cd ~/mame && mame tgm2p -rompath ~/mame/roms -multikeyboard"
 
 
-# stuff I misspell
+# typos
 alias shh="ssh"
 alias eit="exit"
+alias gingko="ginkgo"
 
 
 # fancy ls command
@@ -183,7 +184,7 @@ function watch {
 alias udf=updatedotfiles
 function updatedotfiles {
   # cd and preserve last location
-  pushd ~/workspace/dot_files
+  pushd ~/workspace/dot_files > /dev/null
 
   git add .
 
@@ -196,7 +197,7 @@ function updatedotfiles {
   fi
 
   git push
-  popd
+  popd > /dev/null
 }
 
 
