@@ -56,7 +56,6 @@ nnoremap K <Nop>
 " ========= leader snippets =========
 nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>r :redraw!<CR>
-nmap <Leader>d :GoDoc<CR>
 
 " write/quit mappings
 nnoremap <Leader>q :q!<CR>
