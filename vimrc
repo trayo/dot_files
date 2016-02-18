@@ -23,7 +23,7 @@ set tabstop=2 shiftwidth=2                                " a tab is two spaces 
 set expandtab                                             " use spaces, not tabs (optional)
 set backspace=indent,eol,start                            " backspace through everything in insert mode
 set wildmode=longest:list                                 " better command line completion
-set ignorecase                                            " ingore casing in vim ex mode
+
 
 " ========= misc =========
 " disable auto indent on : and - for yml files
