@@ -23,6 +23,9 @@ export PATH="bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# load fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # Take you to the dir of a file in a gem. e.g. `2gem rspec`
 2gem () {
   cd "$(dirname $(gem which $1))"

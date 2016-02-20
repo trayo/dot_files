@@ -11,7 +11,7 @@ alias vimb="cd ~/.vim/bundle"
 # git
 alias gs="git status"
 alias gst="git status"
-alias gd="git diff --patience --ignore-space-change"
+alias gdi="git diff --patience --ignore-space-change"
 alias gc="git checkout"
 alias gb="git branch"
 alias ga="git add"
