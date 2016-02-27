@@ -216,7 +216,7 @@ function relua {
 
 # rerun shortcut for running go tests
 function rego {
-  command rerun go test -cbp "**/*.go"
+  command rerun 'ginkgo -r' -cbp "**/*.go"
 }
 
 function regink {
