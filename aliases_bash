@@ -129,6 +129,7 @@ alias la="l -a"
 alias me="open http://github.com/trayo"
 alias reload="source ~/.bash_profile"
 alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
+alias fix_postgres="rm ~/Library/Application\ Support/Postgres/var-9.3/postmaster.pid"
 
 
 #mame
