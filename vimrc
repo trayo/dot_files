@@ -53,6 +53,7 @@ nnoremap <C-y> 2<C-y>
 " Disable ex mode and man pages
 nnoremap Q <Nop>
 nnoremap K <Nop>
+vnoremap K <Nop>
 
 
 " ========= leader snippets =========
