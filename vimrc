@@ -55,16 +55,14 @@ nnoremap Q <Nop>
 nnoremap K <Nop>
 vnoremap K <Nop>
 
+" write/quit mappings
+command W :w!
+command Q :q!
+
 
 " ========= leader snippets =========
 nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>r :redraw!<CR>
-
-" write/quit mappings
-nnoremap <Leader>q :q!<CR>
-nnoremap <Leader>w :w!<CR>
-command W :w
-command Q :q
 
 " replace spaces with underscore, for minitest test names
 vnoremap <Leader>u :s/\%V /_/g<cr>
