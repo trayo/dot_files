@@ -23,6 +23,9 @@ export PATH="bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# vim4life
+export EDITOR="vim"
+
 # load fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -80,4 +83,9 @@ function build_mah_prompt {
 }
 
 PROMPT_COMMAND='build_mah_prompt'
+
+# load direnv
+eval "$(direnv hook bash)"
+eval "$(direnv export bash)";
+PROMPT_COMMAND="_direnv_hook;$PROMPT_COMMAND";
 
