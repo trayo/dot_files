@@ -57,6 +57,7 @@ alias gomast="cd ~/go/src/github.com/trayo/go_mastermind"
 
 
 # rails
+alias r="rails"
 alias railsn="rails new -T --database=postgresql --skip-turbolinks"
 alias rs="rails s"
 alias rc="rails c"
@@ -114,6 +115,7 @@ alias dcov="rm -rf coverage/"
 
 
 # heroku
+alias h="heroku"
 alias hr="heroku run"
 alias hrr="heroku run rake"
 alias hp="git push heroku master"
