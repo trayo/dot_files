@@ -86,6 +86,8 @@ PROMPT_COMMAND='build_mah_prompt'
 
 # load direnv
 eval "$(direnv hook bash)"
-eval "$(direnv export bash)";
-PROMPT_COMMAND="_direnv_hook;$PROMPT_COMMAND";
 
+# load fasd
+eval "$(fasd --init auto)"
+# unset s so that `brew install s` will still work
+unalias s
