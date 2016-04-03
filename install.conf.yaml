@@ -1,9 +1,6 @@
 - clean: ['~']
 
 - link:
-    ~/.aliases.bash:
-      force: true
-      path: aliases_bash
     ~/.bash_profile:
       force: true
       path: bash_profile

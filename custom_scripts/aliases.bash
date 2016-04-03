@@ -202,25 +202,3 @@ function updatedotfiles {
   git push
   popd > /dev/null
 }
-
-
-########## rerun functions ##########
-
-# overrides rerun to use -c and -b by default
-function reruby {
-  command rerun $1 -cb
-}
-
-# rerun shortcut for running lua tests
-function relua {
-  command rerun busted $1 -cbp "**/*.lua"
-}
-
-# rerun shortcut for running go tests
-function rego {
-  command rerun 'ginkgo -r' -cbp "**/*.go"
-}
-
-function regink {
-  command rerun ginkgo -cbp "**/*.go"
-}

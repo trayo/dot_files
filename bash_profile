@@ -11,7 +11,6 @@ export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 source ~/.git-completion.bash
 
 # load my aliases
-source ~/.aliases.bash
 export CUSTOM_SCRIPTS="$HOME/workspace/dot_files/custom_scripts"
 source "$CUSTOM_SCRIPTS/source_all"
 
