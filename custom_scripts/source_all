@@ -1,4 +1,5 @@
 #!/bin/bash
 
-source "$CUSTOM_SCRIPTS/2gem.bash"
-source "$CUSTOM_SCRIPTS/fullpath.bash"
+for file in $CUSTOM_SCRIPTS/*.bash; do
+  source $file
+done
