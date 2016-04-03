@@ -31,14 +31,6 @@ export EDITOR="vim"
 # load fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# give the fullpaths of files passed in argv or piped through stdin
-function fullpath {
-  ruby -e '
-    $stdin.each_line { |path| puts File.expand_path path }  if ARGV.empty?
-    ARGV.each { |path| puts File.expand_path path }         unless ARGV.empty?
-  ' "$@"
-}
-
 # Prompt
 function parse_git_branch {
   branch=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
