@@ -12,6 +12,8 @@ source ~/.git-completion.bash
 
 # load my aliases
 source ~/.aliases.bash
+export CUSTOM_SCRIPTS="$HOME/workspace/dot_files/custom_scripts"
+source "$CUSTOM_SCRIPTS/source_all"
 
 # enables 'git hub'
 eval "$(hub alias -s)"
@@ -28,11 +30,6 @@ export EDITOR="vim"
 
 # load fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# Take you to the dir of a file in a gem. e.g. `2gem rspec`
-2gem () {
-  cd "$(dirname $(gem which $1))"
-}
 
 # give the fullpaths of files passed in argv or piped through stdin
 function fullpath {

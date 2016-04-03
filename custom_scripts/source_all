@@ -1,0 +1,3 @@
+#!/bin/bash
+
+source "$CUSTOM_SCRIPTS/2gem.bash"
