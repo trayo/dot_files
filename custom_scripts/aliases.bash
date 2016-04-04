@@ -177,7 +177,7 @@ function clone {
 
 # call "push" in terminal to automatically push the current branch
 function push {
-  git push -u origin $(parse_git_branch)
+  git push -u origin $(parse_git_branch) $1
 }
 
 function watch {
