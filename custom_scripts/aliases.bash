@@ -3,7 +3,7 @@
 # open bash profile and vimrc in vim
 alias bashp="vim ~/.bash_profile"
 alias vimrc="vim ~/.vimrc"
-alias als="vim ~/.aliases.bash"
+alias als="vim $CUSTOM_SCRIPTS/aliases.bash"
 alias vi="vim"
 alias vimb="cd ~/.vim/bundle"
 
@@ -12,6 +12,7 @@ alias vimb="cd ~/.vim/bundle"
 alias gs="git status"
 alias gst="git status"
 alias gdi="git diff --patience --ignore-space-change"
+alias gdic="git diff --cached"
 alias gc="git checkout"
 alias gb="git branch"
 alias ga="git add"
