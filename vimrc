@@ -191,8 +191,7 @@ set t_Co=256       " Explicitly tell vim that the terminal supports 256 colors
 let NERDTreeIgnore=['\coverage']
 
 " close vim if NERDTree is the only open buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " ========== ignore certain folders with ctrlp ==========
 set wildignore+=*tmp/*,*coverage/*,*bower_components/*,*node_modules/*,*.rvm*
