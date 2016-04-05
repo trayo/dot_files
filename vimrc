@@ -186,14 +186,6 @@ set laststatus=2   " Always show the statusline
 set t_Co=256       " Explicitly tell vim that the terminal supports 256 colors
 
 
-" got this list from here: https://github.com/Lokaltog/vim-powerline/blob/c4b72c5be57b165bb6a89d0b8a974fe62c0091d0/autoload/Powerline/Themes/default.vim
-call Pl#Theme#RemoveSegment('fugitive:branch')
-call Pl#Theme#RemoveSegment('syntastic:errors')
-call Pl#Theme#RemoveSegment('fileformat')
-call Pl#Theme#RemoveSegment('fileencoding')
-call Pl#Theme#RemoveSegment('filetype')
-
-
 " ========== nerdtree ==========
 " ignore files or folders in nerdtree
 let NERDTreeIgnore=['\coverage']
