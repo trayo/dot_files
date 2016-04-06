@@ -4,8 +4,8 @@ syntax on
 syntax enable
 
 
-"" ==========  Pathogen, vim path manager (https://github.com/tpope/vim-pathogen#readme)  ==========
-call pathogen#infect()
+"" ========== vundle ==========
+source ~/.vim/autoload/load_vundle.vim
 
 
 "" ==========  setup stuff   ==========
@@ -196,23 +196,3 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
-
-" ========== pathogen plugins ==========
-
-" ctrlp                       https://github.com/kien/ctrlp.vim
-" nerdtree                    https://github.com/scrooloose/nerdtree.git
-" rainbow parenthesis         https://github.com/eapache/rainbow_parentheses.vim
-" vim-commentary              https://github.com/tpope/vim-commentary.git
-" vim-javascript              https://github.com/pangloss/vim-javascript.git
-" vim-jsx                     https://github.com/mxw/vim-jsx
-" vim-react-snippets          https://github.com/justinj/vim-react-snippets
-" vim-ruby                    https://github.com/vim-ruby/vim-ruby.git
-" vim-ruby-collapse           https://github.com/trayo/vim-ruby-collapse
-" vim-slim                    https://github.com/slim-template/vim-slim
-" vim-snipmate                https://github.com/garbas/vim-snipmate
-  " tlib                      https://github.com/tomtom/tlib_vim.git
-  " addon-mw-utils            https://github.com/MarcWeber/vim-addon-mw-utils.git
-  " vim-snippets              https://github.com/honza/vim-snippets.git
-" vim-test                    https://github.com/janko-m/vim-test
-
