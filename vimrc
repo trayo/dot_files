@@ -67,6 +67,8 @@ vnoremap K <Nop>
 command W :w!
 command Q :q!
 
+" use ctrl+g to open command edit window
+set cedit=<C-g>
 
 " ========= leader snippets =========
 nmap <Leader>e :NERDTreeToggle<CR>
@@ -122,14 +124,6 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
-" cnoremap <M-b> <S-Left>
-" cnoremap <M-f> <S-Right>
-
-
-" ======= command editing =======
-cnoremap <M-p> <Up>
-cnoremap <M-n> <Down>
-cnoremap <C-k> <C-f>d$<C-c><End>
 cnoremap <C-y> <C-r><C-o>"
 cnoremap <C-d> <Right><C-h>
 
@@ -179,13 +173,13 @@ let g:rainbow_conf = {
 let g:rainbow_active = 1
 
 
-" ==========  These come from Mislav (http://mislav.uniqpath.com/2011/12/vim-revisited/)  ==========
 " ========== nerdtree ==========
 " ignore files or folders in nerdtree
 let NERDTreeIgnore=['\coverage']
 
 " close vim if NERDTree is the only open buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 " ========== ignore certain folders with ctrlp ==========
 set wildignore+=*tmp/*,*coverage/*,*bower_components/*,*node_modules/*,*.rvm*
