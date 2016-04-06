@@ -1,29 +1,37 @@
 set rtp+=/usr/local/go/misc/vim
 filetype plugin indent on
 syntax on
+syntax enable
+
 
 "" ==========  Pathogen, vim path manager (https://github.com/tpope/vim-pathogen#readme)  ==========
 call pathogen#infect()
 
-"" ==========  Basic setup stuff   ==========
-set nobackup                                              " no backup files
-set nowritebackup                                         " only in case you don't want a backup file while editing
-set noswapfile                                            " no swap files
-set scrolloff=2                                           " adds top/bottom buffer between cursor and window
-set cursorline                                            " colours the line the cursor is on
-set number                                                " line numbers
-set clipboard=unnamed                                     " allows y and p to clipboard vim > 7.4
-set complete-=i                                           " ignores included files in autocomplete
-set splitbelow                                            " sets vim splits to default right and bottom
+
+"" ==========  setup stuff   ==========
+set nobackup                                 " no backup files
+set nowritebackup                            " only in case you don't want a backup file while editing
+set noswapfile                               " no swap files
+set scrolloff=2                              " adds top/bottom buffer between cursor and window
+set cursorline                               " colours the line the cursor is on
+set number                                   " line numbers
+set clipboard=unnamed                        " allows y and p to clipboard vim > 7.4
+set complete-=i                              " ignores included files in autocomplete
+set splitbelow                               " sets vim splits to default right and bottom
 set splitright
-set hlsearch                                              " highlight matches
-set incsearch                                             " incremental searching
-set nowrap                                                " don't wrap lines
-set tabstop=2 shiftwidth=2                                " a tab is two spaces (or set this to 4)
-set expandtab                                             " use spaces, not tabs (optional)
-set backspace=indent,eol,start                            " backspace through everything in insert mode
-set wildmode=longest:list                                 " better command line completion
-set ignorecase                                            " use case ignore by default
+set hlsearch                                 " highlight matches
+set incsearch                                " incremental searching
+set nowrap                                   " don't wrap lines
+set tabstop=2 shiftwidth=2                   " a tab is two spaces (or set this to 4)
+set expandtab                                " use spaces, not tabs (optional)
+set backspace=indent,eol,start               " backspace through everything in insert mode
+set wildmode=longest:list                    " better command line completion
+set ignorecase                               " use case ignore by default
+set laststatus=2                             " Always show the statusline
+set t_Co=256                                 " Explicitly tell vim that the terminal supports 256 colors
+set nocompatible                             " choose no compatibility with legacy vi
+set encoding=utf-8
+set showcmd                                  " display incomplete commands
 
 
 " ========= misc =========
@@ -172,20 +180,6 @@ let g:rainbow_active = 1
 
 
 " ==========  These come from Mislav (http://mislav.uniqpath.com/2011/12/vim-revisited/)  ==========
-set nocompatible                " choose no compatibility with legacy vi
-syntax enable
-set encoding=utf-8
-set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
-
-
-" ==========  Powerline, toolbar (https://github.com/Lokaltog/vim-powerline/) ==========
-let g:Powerline_symbols = 'compatible'
-let g:Powerline_stl_path_style = 'relative'
-set laststatus=2   " Always show the statusline
-set t_Co=256       " Explicitly tell vim that the terminal supports 256 colors
-
-
 " ========== nerdtree ==========
 " ignore files or folders in nerdtree
 let NERDTreeIgnore=['\coverage']
@@ -218,7 +212,6 @@ endif
 " vim-commentary              https://github.com/tpope/vim-commentary.git
 " vim-javascript              https://github.com/pangloss/vim-javascript.git
 " vim-jsx                     https://github.com/mxw/vim-jsx
-" vim-powerline               https://github.com/Lokaltog/vim-powerline.git
 " vim-react-snippets          https://github.com/justinj/vim-react-snippets
 " vim-ruby                    https://github.com/vim-ruby/vim-ruby.git
 " vim-ruby-collapse           https://github.com/trayo/vim-ruby-collapse
