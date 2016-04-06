@@ -5,7 +5,7 @@ alias bashp="vim ~/.bash_profile"
 alias vimrc="vim ~/.vimrc"
 alias als="vim $CUSTOM_SCRIPTS/aliases.bash"
 alias vi="vim"
-alias vimb="cd ~/.vim/bundle"
+alias vun="vim ~/.vim/autoload/load_vundle.vim"
 
 
 # git
