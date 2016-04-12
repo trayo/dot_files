@@ -2054,8 +2054,10 @@
 	<string>6</string>
 	<key>NSColorPickerPageableNameListDefaults</key>
 	<string>1Crayons</string>
+	<key>NSFontPanelSizeSliderParams</key>
+	<string>1 0 100</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/workspace/dot_files</string>
+	<string>~/Documents/iterm themes/backgrounds/Aperature</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{816, 459}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -2104,13 +2106,13 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>905 375 245 320 0 0 1280 800 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>432 177 511 176 0 0 1280 777 </string>
+	<string>402 128 616 261 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 233 924 485 0 0 1280 800 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>448 504 384 129 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1280 773 0 0 1280 800 </string>
+	<string>0 0 1280 800 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 25 1280 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -4465,7 +4467,7 @@
 			<key>Background Image Is Tiled</key>
 			<true/>
 			<key>Background Image Location</key>
-			<string>/Users/travisyoder/Documents/themes/backgrounds/Aperature/Aperature2Small.jpg</string>
+			<string>/Users/travisyoder/Documents/iterm themes/backgrounds/Aperature/Aperature2Small.jpg</string>
 			<key>Blend</key>
 			<real>0.30000001192092896</real>
 			<key>Blink Allowed</key>
@@ -5190,7 +5192,7 @@
 			<key>Background Image Is Tiled</key>
 			<true/>
 			<key>Background Image Location</key>
-			<string>/Users/travisyoder/Documents/themes/backgrounds/Aperature/aperature_green_small.jpg</string>
+			<string>/Users/travisyoder/Documents/iterm themes/backgrounds/Aperature/aperature_green_small.jpg</string>
 			<key>Blend</key>
 			<real>0.84294795989990234</real>
 			<key>Blink Allowed</key>
@@ -5752,7 +5754,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>454263915.04032898</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>478406938.28555602</real>
+	<real>481667904.362876</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -5817,7 +5819,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-05T19:16:51Z</date>
+	<date>2016-04-06T19:30:54Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -5827,7 +5829,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
