@@ -2106,13 +2106,13 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>905 375 245 320 0 0 1280 800 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>402 128 616 261 0 0 1280 777 </string>
+	<string>310 128 616 268 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 233 924 485 0 0 1280 800 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>448 504 384 129 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1280 800 0 0 1280 777 </string>
+	<string>0 4 1280 773 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 25 1280 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2672,11 +2672,11 @@
 			<key>Name</key>
 			<string>Space</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -3397,11 +3397,11 @@
 			<key>Name</key>
 			<string>Fez</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -4122,11 +4122,11 @@
 			<key>Name</key>
 			<string>Presentation</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -4847,11 +4847,11 @@
 			<key>Name</key>
 			<string>Aperature Labs Brown</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -5572,11 +5572,11 @@
 			<key>Name</key>
 			<string>Aperature Labs Green</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 18</string>
+			<string>Monaco 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -5754,7 +5754,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>454263915.04032898</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>481667904.362876</real>
+	<real>482115112.62137699</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -5819,7 +5819,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-06T19:30:54Z</date>
+	<date>2016-04-12T00:51:35Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -6449,11 +6449,11 @@
 											<key>Name</key>
 											<string>Presentation</string>
 											<key>Non Ascii Font</key>
-											<string>Monaco 18</string>
+											<string>Monaco 16</string>
 											<key>Non-ASCII Anti Aliased</key>
 											<true/>
 											<key>Normal Font</key>
-											<string>Monaco 18</string>
+											<string>Monaco 16</string>
 											<key>Option Key Sends</key>
 											<integer>2</integer>
 											<key>Prompt Before Closing 2</key>
