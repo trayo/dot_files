@@ -5,7 +5,7 @@ syntax enable
 
 
 "" ========== vundle ==========
-source ~/.vim/autoload/load_vundle.vim
+source  ~/.vim/vundle/plugins.vim
 
 
 "" ==========  setup stuff   ==========
