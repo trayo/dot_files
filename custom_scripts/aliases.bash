@@ -42,15 +42,6 @@ alias skip="git rebase --skip"
 alias abort="git rebase --abort"
 
 
-# directories
-alias turing="cd ~/turing"
-alias temp="cd ~/TEMP"
-alias proj="cd ~/turing/projects"
-alias octo="cd ~/turing/octopress"
-alias work="cd ~/workspace"
-alias dot="cd ~/workspace/dot_files"
-
-
 # projects
 alias list="cd ~/turing/projects/mv_listr"
 alias gamin="cd ~/workspace/where_is_denver_board_game_night"
@@ -133,6 +124,7 @@ alias me="open http://github.com/trayo"
 alias reload="source ~/.bash_profile"
 alias vimsnips="cd ~/.vim/bundle/vim-snippets/snippets"
 alias fix_postgres="rm ~/Library/Application\ Support/Postgres/var-9.3/postmaster.pid"
+alias vundle="vim +PluginInstall +qall"
 
 
 #mame
