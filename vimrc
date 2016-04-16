@@ -98,7 +98,7 @@ nnoremap <Leader>= <c-w>=
 command U :call Underscore()
 command Underscore :call Underscore()
 function! Underscore()
-  normal! mqv_w
+  normal! mq$v_w
   :s/\%V /_/g
   :exe "normal! \<esc>`q"
 endfunction
