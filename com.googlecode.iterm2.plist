@@ -1941,6 +1941,20 @@
 	<real>5.0500001907348633</real>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x42-0x60000</key>
+		<dict>
+			<key>Action</key>
+			<integer>10</integer>
+			<key>Text</key>
+			<string>b</string>
+		</dict>
+		<key>0x46-0x60000</key>
+		<dict>
+			<key>Action</key>
+			<integer>10</integer>
+			<key>Text</key>
+			<string>f</string>
+		</dict>
 		<key>0x50-0x120000</key>
 		<dict>
 			<key>Action</key>
@@ -1982,6 +1996,13 @@
 			<integer>13</integer>
 			<key>Text</key>
 			<string></string>
+		</dict>
+		<key>0x7f-0x60000</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Text</key>
+			<string>17</string>
 		</dict>
 		<key>0xf702-0x300000</key>
 		<dict>
@@ -2131,11 +2152,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>310 128 616 268 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 233 924 485 0 0 1280 800 </string>
+	<string>59 292 924 485 0 0 1280 777 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>448 504 384 129 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1280 773 0 0 1280 777 </string>
+	<string>0 0 1280 800 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 25 1280 752 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -5777,7 +5798,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>454263915.04032898</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>482115112.62137699</real>
+	<real>484536190.21494198</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -5842,7 +5863,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-12T00:51:35Z</date>
+	<date>2016-05-10T01:17:41Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
