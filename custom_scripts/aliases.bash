@@ -172,10 +172,6 @@ function push {
   git push -u origin $(parse_git_branch) $1
 }
 
-function watch {
-  while :; do clear; "$@"; sleep 2; done
-}
-
 # easy update dot files
 alias udf=updatedotfiles
 function updatedotfiles {
