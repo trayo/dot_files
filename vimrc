@@ -196,3 +196,7 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+
+" ======= airline =======
+let g:airline_powerline_fonts = 1
