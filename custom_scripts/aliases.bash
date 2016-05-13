@@ -6,7 +6,8 @@ alias vimrc="vim ~/.vimrc"
 alias als="vim $CUSTOM_SCRIPTS/aliases.bash"
 alias plugins="vim ~/.vim/vundle/plugins.vim"
 alias vi="vim"
-
+alias docker_env="docker-machine env && eval $(docker-machine env)"
+alias delete_unused_images="docker images | ag -o '(<none>\s*){2}[\S]*\s' | ag -o '[a-z0-9]+(?=\s)' | xargs docker rmi -f"
 
 # git
 alias gs="git status"
