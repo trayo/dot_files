@@ -27,9 +27,6 @@ export PATH=$PATH:$GOPATH/bin
 # vim4life
 export EDITOR="vim"
 
-# load fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # load prompt
 PROMPT_COMMAND='build_mah_prompt'
 
