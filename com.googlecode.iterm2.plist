@@ -1924,7 +1924,7 @@
 	<key>Default Arrangement Name</key>
 	<string>Arrangement 2</string>
 	<key>Default Bookmark Guid</key>
-	<string>C2E3EBAA-13AF-4ECE-9683-CFFE589025E6</string>
+	<string>5A06CEB1-13FC-4078-AB69-B4EDB4E90A3D</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
@@ -5798,7 +5798,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>454263915.04032898</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>484865841.86244398</real>
+	<real>485134369.23159599</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -5863,7 +5863,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-13T20:57:09Z</date>
+	<date>2016-05-16T23:32:35Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
