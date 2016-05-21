@@ -25,6 +25,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'sunaku/vim-ruby-minitest'
 
 call vundle#end()
 
