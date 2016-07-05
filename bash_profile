@@ -33,6 +33,11 @@ PROMPT_COMMAND='build_mah_prompt'
 # load direnv
 eval "$(direnv hook bash)"
 
+# load bash-completion from brew
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 # load fasd
 eval "$(fasd --init auto)"
 # unset s so that `brew install s` will still work
