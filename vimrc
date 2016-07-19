@@ -42,8 +42,9 @@ autocmd FileType yaml setl indentkeys-=<:>
 highlight OverLength ctermbg=240 ctermfg=white
 call matchadd('OverLength', '\%81v.', 100)
 
-" change highlight text colors to black
-highlight Visual ctermfg=7 ctermbg=8
+" change highlight text colors
+highlight Visual ctermfg=15 ctermbg=8
+highlight Search ctermfg=16
 
 " in visual mode, "." will for each line, go into normal mode and execute the "."
 vnoremap . :norm.<CR>a
