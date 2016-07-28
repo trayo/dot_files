@@ -32,7 +32,7 @@ set t_Co=256                                 " Explicitly tell vim that the term
 set nocompatible                             " choose no compatibility with legacy vi
 set encoding=utf-8
 set showcmd                                  " display incomplete commands
-
+set nofoldenable                             " disable folding
 
 " ========= misc =========
 " disable auto indent on : and - for yml files
