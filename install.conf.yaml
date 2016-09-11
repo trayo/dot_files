@@ -13,6 +13,9 @@
     ~/.gitignore_global:
       force: true
       path: gitignore_global
+    ~/.inputrc:
+      force: true
+      path: inputrc
     ~/.pryrc:
       force: true
       path: pryrc
