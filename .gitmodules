@@ -34,9 +34,9 @@
 [submodule "vim-jsx"]
 	path = vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
-[submodule "vim-airline"]
-	path = vim-airline
-	url = https://github.com/vim-airline/vim-airline
+[submodule "vim-airline-themes"]
+	path = vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "vim-react-snippets"]
 	path = vim/bundle/vim-react-snippets
 	url = https://github.com/justinj/vim-react-snippets.git
@@ -61,3 +61,12 @@
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "vim/bundle/vim-ginkgo-snippets"]
+	path = vim/bundle/vim-ginkgo-snippets
+	url = https://github.com/trayo/vim-ginkgo-snippets.git
+[submodule "vim/bundle/vim-gomega-snippets"]
+	path = vim/bundle/vim-gomega-snippets
+	url = https://github.com/trayo/vim-gomega-snippets.git
+[submodule "vim/bundle/vim-ruby-minitest"]
+	path = vim/bundle/vim-ruby-minitest
+	url = https://github.com/sunaku/vim-ruby-minitest.git
