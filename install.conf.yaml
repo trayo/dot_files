@@ -1,5 +1,11 @@
 - clean: ['~']
 
+- shell:
+    - brew install rbenv
+    - brew install hub
+    - brew install direnv
+    - brew install fasd
+
 - link:
     ~/.bash_profile:
       force: true
@@ -19,4 +25,3 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-
