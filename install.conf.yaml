@@ -10,6 +10,9 @@
     ~/.bash_profile:
       force: true
       path: bash_profile
+    ~/.git-completion.bash:
+      force: true
+      path: git-completion.bash
     ~/.gitignore_global:
       force: true
       path: gitignore_global
