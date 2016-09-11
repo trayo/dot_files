@@ -42,3 +42,5 @@ fi
 eval "$(fasd --init auto)"
 # unset s so that `brew install s` will still work
 unalias s
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
