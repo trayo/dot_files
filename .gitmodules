@@ -48,7 +48,7 @@
 	url = https://github.com/garbas/vim-snipmate.git
 [submodule "vim-snippets"]
 	path = vim/bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
+	url = https://github.com/trayo/vim-snippets.git
 [submodule "vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
