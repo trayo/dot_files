@@ -1,3 +1,15 @@
+# more options can be found here:
+# http://cnswww.cns.cwru.edu/php/chet/readline/rluserman.html
+
 set completion-ignore-case on
 set show-all-if-ambiguous on
 set completion-map-case on
+set completion-display-width 0
+
+set colored-stats on
+
+# set print-completions-horizontally on
+# set completion-prefix-display-length 1
+
+# set editing-mode vi
+# set show-mode-in-prompt on
