@@ -147,7 +147,7 @@ alias gingko="ginkgo"
 # -h humanize sizes
 # -q print nongraphic chars as question marks
 alias ll="ls -lFGgohqa"
-alias l="ls -lFGgohqa"
+alias l="ll"
 
 
 ########## functions ##########
