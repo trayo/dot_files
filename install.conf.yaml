@@ -1,7 +1,7 @@
 - clean: ['~']
 
 - shell:
-    - brew install ag tree direnv fasd hub rbenv
+    - brew bundle
 
 - link:
     ~/.bash_profile:
