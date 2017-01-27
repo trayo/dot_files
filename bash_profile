@@ -1,4 +1,5 @@
 # load rbenv
+# export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
 # load bins
