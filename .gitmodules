@@ -64,6 +64,9 @@
 [submodule "vim/bundle/vim-gomega-snippets"]
 	path = vim/bundle/vim-gomega-snippets
 	url = https://github.com/trayo/vim-gomega-snippets.git
+[submodule "vim/bundle/vim-go-snippets-extended"]
+	path = vim/bundle/vim-go-snippets-extended
+	url = https://github.com/trayo/vim-go-snippets-extended.git
 [submodule "vim/bundle/vim-ruby-minitest"]
 	path = vim/bundle/vim-ruby-minitest
 	url = https://github.com/sunaku/vim-ruby-minitest.git
