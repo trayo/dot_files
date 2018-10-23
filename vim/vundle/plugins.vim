@@ -4,6 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'

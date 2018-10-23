@@ -45,3 +45,7 @@ eval "$(fasd --init auto)"
 unalias s
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# fast key repeat rate, requires reboot to take effect
+# defaults write ~/Library/Preferences/.GlobalPreferences KeyRepeat -int 1
+# defaults write ~/Library/Preferences/.GlobalPreferences InitialKeyRepeat -int 15

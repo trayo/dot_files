@@ -32,7 +32,7 @@ function build_mah_prompt {
   fi
 
   # next line
-  ps1="${ps1}\n> "
+  ps1="${ps1}\n🚀 "
 
   # set prompt output
   PS1="$ps1"
