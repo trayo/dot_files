@@ -39,8 +39,8 @@ set nofoldenable                             " disable folding
 autocmd FileType yaml setl indentkeys-=<:>
 
 " highlights characters on the 80th line
-highlight OverLength ctermbg=240 ctermfg=white
-call matchadd('OverLength', '\%81v.', 100)
+" highlight OverLength ctermbg=240 ctermfg=white
+" call matchadd('OverLength', '\%81v.', 100)
 
 " change highlight text colors
 highlight Visual ctermfg=15 ctermbg=8
