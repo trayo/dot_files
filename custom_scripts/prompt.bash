@@ -17,7 +17,7 @@ function prompt_segment {
   fi
 }
 
-function build_mah_prompt {
+function build_prompt {
   # time
   ps1="$(prompt_segment " \@ ")"
 

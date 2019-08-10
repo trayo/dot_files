@@ -22,7 +22,7 @@ eval "$(hub alias -s)"
 export EDITOR="vim"
 
 # load prompt
-PROMPT_COMMAND='build_mah_prompt'
+PROMPT_COMMAND='build_prompt'
 
 # load direnv
 eval "$(direnv hook bash)"
