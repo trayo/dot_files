@@ -11,9 +11,9 @@ function parse_git_branch {
 function prompt_segment {
   # for colours: http://en.wikipedia.org/wiki/ANSI_escape_code#Colors
   # change the 37 to change the foreground
-  # change the 45 to change the background
+  # change the 46 to change the background
   if [[ ! -z "$1" ]]; then
-    echo "\[\033[${2:-37};45m\]${1}\[\033[0m\]"
+    echo "\[\033[${2:-37};46m\]${1}\[\033[0m\]"
   fi
 }
 
@@ -28,7 +28,7 @@ function build_prompt {
   git_branch=`parse_git_branch`
   if [[ ! -z "$git_branch" ]]
   then
-    ps1="${ps1} $(prompt_segment " $git_branch " 32)"
+    ps1="${ps1} $(prompt_segment " $git_branch " 37)"
   fi
 
   # next line

@@ -13,7 +13,6 @@ set nobackup                                 " no backup files
 set nowritebackup                            " only in case you don't want a backup file while editing
 set noswapfile                               " no swap files
 set scrolloff=2                              " adds top/bottom buffer between cursor and window
-set cursorline                               " colours the line the cursor is on
 set number                                   " line numbers
 set clipboard=unnamed                        " allows y and p to clipboard vim > 7.4
 set complete-=i                              " ignores included files in autocomplete
@@ -33,6 +32,7 @@ set nocompatible                             " choose no compatibility with lega
 set encoding=utf-8
 set showcmd                                  " display incomplete commands
 set nofoldenable                             " disable folding
+set guifont=Menlo\ Regular:h15
 
 " ========= misc =========
 " disable auto indent on : and - for yml files
@@ -43,8 +43,11 @@ autocmd FileType yaml setl indentkeys-=<:>
 " call matchadd('OverLength', '\%81v.', 100)
 
 " change highlight text colors
-highlight Visual ctermfg=15 ctermbg=8
-highlight Search ctermfg=16
+" highlight Visual ctermfg=15 ctermbg=8
+" highlight Search ctermfg=16
+" highlight Visual ctermfg=4 ctermbg=7
+" highlight Visual guifg=#2E8CCF guibg=#EEE8D6
+" highlight Cursor guifg=black guibg=white
 
 " in visual mode, "." will for each line, go into normal mode and execute the "."
 vnoremap . :norm.<CR>a
@@ -202,6 +205,11 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-
 " ======= airline =======
 let g:airline_powerline_fonts = 1
+
+" " ======= color scheme =======
+" set background=dark
+let g:solarized_termtrans = 1
+silent! colorscheme solarized
+
