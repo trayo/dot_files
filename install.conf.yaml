@@ -1,8 +1,5 @@
 - clean: ['~']
 
-- shell:
-    - brew bundle
-
 - link:
     ~/.bash_profile:
       force: true
@@ -16,9 +13,6 @@
     ~/.inputrc:
       force: true
       path: inputrc
-    ~/.pryrc:
-      force: true
-      path: pryrc
     ~/.vim:
       force: true
       path: vim/

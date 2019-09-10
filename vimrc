@@ -33,6 +33,9 @@ set encoding=utf-8
 set showcmd                                  " display incomplete commands
 set nofoldenable                             " disable folding
 set guifont=Menlo\ Regular:h15
+set undofile                                 " Maintain undo history between sessions
+set undodir=~/.vim_undodir
+
 
 " ========= misc =========
 " disable auto indent on : and - for yml files
