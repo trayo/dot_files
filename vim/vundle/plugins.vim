@@ -21,7 +21,6 @@ Plugin 'trayo/vim-gomega-snippets'
 Plugin 'trayo/vim-go-snippets-extended'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
-Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-unimpaired'
 
