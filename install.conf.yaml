@@ -22,3 +22,6 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [chsh -s $(which bash), Switching to bash]
+    - ['rm -rf ~/.vim/bundle/Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim', Installing Vundle]
+    - [vundle, Running Vundle Plugin Install]
